@@ -1,5 +1,5 @@
 # helpdesk projekt pro školu
-test obyčejného textu
+*test obyčejného textu*
 ## Header 2 
-test
+**test**
 ### Header 3 test
