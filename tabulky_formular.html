@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Jméno</th><th>email</th><th>hodnota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Václav</td><td>test@email.cz</td><td>1000</td>
+            </tr>
+            <tr>
+                <td>Ellen</td><td>testing23@seznam.cz</td><td>2255</td>
+            </tr>
+            <tr>
+                <td>An</td><td>email@gmail.com</td><td>1500</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2"> celkově:</td><td>3755</td>
+            </tr>
+        </ftoot>
+    </table>
+    <hr>
+    <form action="#" method="post">
+        <p>
+            <label for="name">Jméno žadatele :</label>
+            <input id="name" name="name">
+        </p>
+        <p>
+            <label for="email">*Email žadatele :</label>
+            <input id="email" type="email" name="email" required> 
+        </p>
+        <p>
+            <label for="telephone">Telefon :</label>
+            <input id="telephone" name="telephone">
+        </p>
+        <p>
+            <label for="location"> Pracoviště/budova/patro :</label>
+            <input id="location" name="location">
+        </p>
+        <p>
+            <label for="record_number">Evidenční číslo :</label>
+            <input id="record_number" name="record_number">
+        </p>
+        <p>
+            <label for="problem_desc">*Popis problému :</label>
+            <textarea id="problem_desc" name="problem_desc" rows="8" cols="50" required></textarea>
+        </p>      
+        <p>
+           <button>Odešli</button> 
+        </p>
+    </form>
+    <div>
+        <i>*povinné údaje</i>
+    </div>
+    <hr>
+</body>
+</html>
