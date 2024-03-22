@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nový Požadavek</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="logo_lf2">
+            <h1>HELPDESK 2.LF UK - POMOC S VÝPOČETNÍ TECHNIKOU</h1>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <form action="formular_n_poz.html" method="post" enctype="multipart/form-data">
+            <label for="name">Jméno žadatele:</label>
+            <input type="text" name="name" id="name">
+            <p>
+                <label for="email"><b>*Kontaktní email:</b></label>
+                <input type="email" name="email" id="email" required>
+            </p>
+            <p>
+                <label for="tel">Telefon:</label>
+                <input type="tel" name="tel" id="tel">
+            </p>
+            <p>
+                <label for="category">Kategorie požadavku:</label>
+                <select name="catagory" id="category">
+                    <option value="other">Jiné</option>
+                    <option value="purchase">Nákup techniky/tonerů</option>
+                    <option value="fail">Porucha techniky</option>
+                    <option value="zoom">Založení zoom meetingu</option>
+                    <!--potřeba promyslet, jestli je nabídka dostačující-->
+                </select>
+            </p>
+            <p>
+                <label for="location">Pracoviště/budova/patro:</label>
+                <input type="text" name="location" id="location">
+            </p>
+            <p>
+                <label for="record_n">Evidenční číslo:</label>
+                <input type="text" name="record_n" id="record_n">
+            </p>
+            <p>
+                <label for="problem_text"><b>*Popis požadavku:</b></label>
+                <textarea name="problem_text" id="problem_text" cols="70" rows="10"></textarea>
+            </p>
+            <p>
+                **<input type="file" name="file" id="file" accept="image/*"> 
+            </p>
+            <p>
+                <input type="submit" value="Odeslat Požadavek">
+            </p>
+        </form>
+        <p>
+            <i>(*povinné údaje, **pouze o velikosti XXX)</i>
+        </p>
+    </main>
+    <footer>
+        <div>
+            <a href="">GDPR</a>
+            <a href="">Cookies</a>
+            <a href="">Podmínky</a>
+            <a href="">Kontakty</a>
+        </div>
+        <hr>
+        <p>2024 &copy; domena.cz</p>
+    </footer>
+</body>
+</html>
