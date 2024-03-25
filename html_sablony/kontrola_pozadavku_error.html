@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="logo_lf2">
+            <h1>HELPDESK 2.LF UK - POMOC S VÝPOČETNÍ TECHNIKOU</h1>
+        </div>
+        <hr>
+    </header>
+    <main>
+        <div>
+            <h2>Prosím vložte číslo vašeho požadavku:</h2>
+            <p>
+                <form action="kontrola_pozadavku.html" method="post" enctype="multipart/form-data">
+                    <input type="number" name="id_number" id="id_number">
+                    <!--odeslání jenom pomocí enter - enbo automatické po vyplnění správného formátu?-->
+                </form>
+            </p>
+        </div>
+        <div>
+            <div><!--barevný indikator erroru--></div>"Zadané číslo požadavku neexistuje!"
+        </div>
+    </main>
+    <footer>
+        <div>
+            <a href="">GDPR</a>
+            <a href="">Cookies</a>
+            <a href="">Podmínky</a>
+            <a href="">Kontakty</a>
+        </div>
+        <hr>
+        <p>2024 &copy; domena.cz</p>
+    </footer>
+</body>
+</html>
