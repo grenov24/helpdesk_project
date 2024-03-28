@@ -1,0 +1,31 @@
+
+:root {
+    --default-font-size: 16px;
+    --font-main: 'Montserrat' sans-serif;
+    --background-color: #FFFFFF;
+
+    --primary-text-color: #000000;
+    --secondary-text-color: #FFFFFF;
+    --tertiary-text-color: #504E4E;
+    --special-lf2-color: #E4002B;
+
+    --form-background-color: #C1C1C1;
+    --form-fill-color: #EAEAEA;
+
+    --shadow: rgba(0, 0, 0, 0.25);
+}
+
+html {
+    font-size: var(--default-font-size);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
