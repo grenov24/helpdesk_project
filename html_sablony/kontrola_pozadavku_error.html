@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Případ č.xxxx</title>
+    <title>Document</title>
 </head>
 <body>
     <header>
@@ -15,23 +14,18 @@
         <hr>
     </header>
     <main>
-        <header>
-            <h2>Požadavek č. XXXX</h2>
-            <hr>
-        </header>
-        <section>
-            <h3>Popis problému</h3>
-            <p>text problému.</p>
-         </section>
-        <section>
-            <h3>Stav řízení</h2>
-            <p>Stav</p> 
-        </section>    
-        <section>
-            <h3>Poznámka technika</h3>
-            <p>poznámka text</p>
-        </section>
-    
+        <div>
+            <h2>Prosím vložte číslo vašeho požadavku:</h2>
+            <p>
+                <form action="kontrola_pozadavku.html" method="post" enctype="multipart/form-data">
+                    <input type="number" name="id_number" id="id_number">
+                    <!--odeslání jenom pomocí enter - enbo automatické po vyplnění správného formátu?-->
+                </form>
+            </p>
+        </div>
+        <div>
+            <div><!--barevný indikator erroru--></div>"Zadané číslo požadavku neexistuje!"
+        </div>
     </main>
     <footer>
         <div>
