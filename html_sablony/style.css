@@ -13,6 +13,7 @@
     --form-fill-color: #EAEAEA;
 
     --shadow: rgba(0, 0, 0, 0.25);
+    --without-edges: 107.5rem
 }
 
 html {
@@ -29,3 +30,16 @@ body {
     padding: 0;
     background-color: var(--background-color);
 }
+body,
+input {
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+}
+header {
+    display: flex;
+    >img {
+        width: 28.875rem;
+        height: 25.5rem;
+        padding-left: 6.25rem;
+    }
+    }
