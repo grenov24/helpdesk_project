@@ -54,7 +54,6 @@ header {
             width: 80.1875rem;
             max-width: 100%;
             align-self: center;
-            text-size-adjust: none;
         }
     }
     a {
@@ -70,12 +69,33 @@ header {
     }
 }
 main {
-    span{
+    .note{
         font-size: var(--smaller-font-size);
         color: var(--tertiary-text-color);
         font-weight: 400;
-        padding: 32.375rem 0 0 70.375rem;
-        margin-top: 0.75rem;
+        padding-left: 70.375rem;
+
     }
+    .requests{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        justify-content: center;
+        align-items: center;
+        .new_request{
+            background: var(--special-lf2-color);
+            padding: 0 20rem 6.5625rem 20rem;
+            margin-top: 2rem;
+            height: 13.125rem;
+            font-size: 3.25rem;
+            }
+        .check_existing_request {
+            background: var(--special-lf2-color);
+            }
+        a {
+            color: var(--secondary-text-color);
+        }
+        }
+
 }
     
