@@ -15,7 +15,8 @@
     --form-fill-color: #EAEAEA;
 
     --shadow: rgba(0, 0, 0, 0.25);
-    --without-edges: 107.5rem
+    --without-edges: 107.5rem;
+    --button-height: 13.125rem;
 }
 html {
     font-size: var(--default-font-size);
@@ -29,7 +30,6 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
-    height: 2500px;
 }
 body,
 input {
@@ -40,7 +40,6 @@ header {
     height: 29.375rem;
     max-width: 100%;
     box-shadow: 5px 0px 10px var(--shadow);
-    gap: 1.5625rem;
     .header_logo_h {
         display: flex;
         img {
@@ -54,6 +53,11 @@ header {
             width: 80.1875rem;
             max-width: 100%;
             align-self: center;
+            span {
+                color: var(--special-lf2-color);
+                font-weight: 700;
+            }
+
         }
     }
     a {
@@ -65,39 +69,49 @@ header {
         right: 5rem;
     }
     hr {
-        margin:0 6.25rem;
+        margin: 0 6.25rem;
     }
 }
 main {
-    .note{
+    span{
         font-size: var(--smaller-font-size);
         color: var(--tertiary-text-color);
         font-weight: 400;
+        margin: 0;
+        padding-top: 0.75rem;
         padding-left: 70.375rem;
-
+        display: inline-block;
     }
-    .requests{
-        display: flex;
-        flex-direction: column;
-        gap: 5rem;
-        justify-content: center;
-        align-items: center;
-        .new_request{
-            background: var(--special-lf2-color);
-            padding: 0 20rem 6.5625rem 20rem;
-            margin-top: 2rem;
-            height: 13.125rem;
-            font-size: 3.25rem;
-            }
-        .check_existing_request {
-            background: var(--special-lf2-color);
-            }
+    .new_request {
+        margin:2rem 40rem 0;
+        height: var(--button-height);
+        background-color: var(--special-lf2-color);
+        text-align: center;
+        padding-top: 4.625rem;
+        border-radius: 1.875rem;
         a {
             color: var(--secondary-text-color);
+            font-size: 3.25rem;
+            font-weight: 400;
+            text-decoration: none;
         }
+    }
+    .check_existing_request {
+        margin: 5rem 43.4375rem 0;
+        height: var(--button-height);
+        background-color: var(--special-lf2-color);
+        text-align: center;
+        padding-top: 2.25rem;
+        border-radius: 1.875rem;
+        a{
+            color: var(--secondary-text-color);
+            font-size: 2.5rem;
+            font-weight: 400;
+            text-decoration: none;
         }
-
+    }
 }
+
 
 /* potřeba upravi CSS, zrušit flexbox - a upravovat vzdálenosti postupně od vrchu*/
 
