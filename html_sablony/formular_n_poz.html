@@ -19,46 +19,38 @@
         <form action="formular_n_poz.html" method="post" enctype="multipart/form-data">
             <label for="name">Jméno žadatele:</label>
             <input type="text" name="name" id="name">
-            <p>
-                <label for="email"><b>*Kontaktní email:</b></label>
-                <input type="email" name="email" id="email" required>
-            </p>
-            <p>
-                <label for="tel">Telefon:</label>
-                <input type="tel" name="tel" id="tel">
-            </p>
-            <p>
-                <label for="category">Kategorie požadavku:</label>
-                <select name="catagory" id="category">
-                    <option value="other">Jiné</option>
-                    <option value="purchase">Nákup techniky/tonerů</option>
-                    <option value="fail">Porucha techniky</option>
-                    <option value="zoom">Založení zoom meetingu</option>
-                    <!--potřeba promyslet, jestli je nabídka dostačující-->
-                </select>
-            </p>
-            <p>
-                <label for="location">Pracoviště/budova/patro:</label>
-                <input type="text" name="location" id="location">
-            </p>
-            <p>
-                <label for="record_n">Evidenční číslo:</label>
-                <input type="text" name="record_n" id="record_n">
-            </p>
-            <p>
-                <label for="problem_text"><b>*Popis požadavku:</b></label>
-                <textarea name="problem_text" id="problem_text" cols="70" rows="10"></textarea>
-            </p>
-            <p>
-                **<input type="file" name="file" id="file" accept="image/*"> 
-            </p>
-            <p>
-                <input type="submit" value="Odeslat Požadavek">
-            </p>
+            
+            <label for="email"><b>*Kontaktní email:</b></label>
+            <input type="email" name="email" id="email" required>
+        
+            <label for="tel">Telefon:</label>
+            <input type="tel" name="tel" id="tel">
+        
+            <label class="label_gap" for="category">Kategorie požadavku:</label>
+            <select class="label_gap" name="catagory" id="category">
+                <option value="other">Jiné</option>
+                <option value="purchase">Nákup techniky/tonerů</option>
+                <option value="fail">Porucha techniky</option>
+                <option value="zoom">Založení zoom meetingu</option>
+                <!--potřeba promyslet, jestli je nabídka dostačující-->
+            </select>
+        
+            <label for="location">Pracoviště/budova/patro:</label>
+            <input class="location" type="text" name="location" id="location">
+        
+            <label for="record_n">Evidenční číslo:</label>
+            <input type="text" name="record_n" id="record_n">
+    
+            <label for="problem_text"><b>*Popis požadavku:</b></label>
+            <textarea name="problem_text" id="problem_text" cols="70" rows="10"></textarea>
+        
+            <input class="upload_file" type="file" name="file" id="file" accept="image/*">
+        
+            <input type="submit" value="Odeslat Požadavek">
+                
+            
         </form>
-        <p>
-            <i>(*povinné údaje, **pouze o velikosti XXX)</i>
-        </p>
+        <i>(*povinné údaje, **pouze o velikosti XXX)</i>
     </main>
     <footer>
         <div>

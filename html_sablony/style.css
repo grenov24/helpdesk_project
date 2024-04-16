@@ -32,7 +32,10 @@ body {
     background-color: var(--background-color);
 }
 body,
-input {
+input,
+label,
+input,
+textarea {
     font-family: var(--font-main);
     font-size: var(--smaller-font-size);
 }
@@ -97,7 +100,7 @@ main {
         }
     }
     .check_existing_request {
-        margin: 5rem 43.4375rem 0;
+        margin: 5rem 43.4375rem 6.875rem;
         height: var(--button-height);
         background-color: var(--special-lf2-color);
         text-align: center;
@@ -113,7 +116,7 @@ main {
 }
 
 footer {
-    margin-top: 6.875rem;
+    
     padding-top: 5.625rem;
     padding-bottom: 5.625rem;
     background-color: var(--background-color);
@@ -141,6 +144,37 @@ footer {
         margin: 2.5rem 6.25rem 0 6.25rem;
     }
 
+}
+
+form {
+    margin-top: 6.5rem;
+    margin-bottom: 13.75rem;
+    display:grid;
+    grid-template-columns: max-content max-content;
+    gap: 4.5625rem;
+    grid-gap: 2.8125rem ;
+    label {
+        text-align: right;
+        margin-left: 19.625rem;
+    }
+    .label_gap {
+        margin-top: 11.25rem;
+    }
+    input, select {
+        width: 36.25rem;
+        background-color: var(--form-fill-color);
+    }
+    .location {
+        width: 50rem;
+    }
+    textarea {
+        height: 31.25rem;
+        width: 63.75rem;
+        background-color: var(--form-fill-color);
+    }
+    .upload_file {
+        background-color: var(--background-color);
+    }
 }
 
 
