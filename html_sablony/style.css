@@ -146,16 +146,16 @@ footer {
 
 }
 
-form {
+.form {
     margin-top: 6.5rem;
     margin-bottom: 13.75rem;
     display:grid;
     grid-template-columns: max-content max-content;
     gap: 4.5625rem;
-    grid-gap: 2.8125rem ;
+    grid-gap: 2.8125rem;
     label {
         text-align: right;
-        margin-left: 19.625rem;
+        margin-left: 14.875rem;
     }
     .label_gap {
         margin-top: 11.25rem;
@@ -163,6 +163,9 @@ form {
     input, select {
         width: 36.25rem;
         background-color: var(--form-fill-color);
+        border-color: var(--primary-text-color);
+        padding: 0;
+        margin: 0;
     }
     .location {
         width: 50rem;
@@ -171,10 +174,26 @@ form {
         height: 31.25rem;
         width: 63.75rem;
         background-color: var(--form-fill-color);
+        padding: 0;
+        margin: 0;
     }
+}
+.bottom_form {
+    display: flex;
+    gap: 38.75rem;
+    max-width: 100%;
+    margin: 0;
+
+
     .upload_file {
         background-color: var(--background-color);
+        width: 12.5rem;
+        margin-left: 36.5625rem;
     }
+    .submit {
+        width: 12.5rem;
+    }
+    
 }
 
 
