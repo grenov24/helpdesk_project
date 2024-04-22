@@ -2,7 +2,9 @@
 
 :root {
     --default-font-size: 12px;
-    --smaller-font-size: 1.5rem;
+    --s-font-size: 1.5rem;
+    --m-font-size: 2.5rem;
+    --l-font-size: 3.5rem;
     --font-main: 'Montserrat', sans-serif;
     --background-color: #FFFFFF;
 
@@ -17,6 +19,14 @@
     --shadow: rgba(0, 0, 0, 0.25);
     --without-edges: 107.5rem;
     --button-height: 13.125rem;
+    
+
+    --m-gap: 2rem;
+    --xxl-gap: 6.25rem;
+
+
+    --s-radius: 0.25rem;
+    --m-radius: 1.25rem;
 }
 html {
     font-size: var(--default-font-size);
@@ -37,7 +47,7 @@ label,
 input,
 textarea {
     font-family: var(--font-main);
-    font-size: var(--smaller-font-size);
+    font-size: var(--s-font-size);
 }
 header {
     height: 29.375rem;
@@ -64,7 +74,7 @@ header {
         }
     }
     a {
-        font-size: var(--smaller-font-size);
+        font-size: var(--s-font-size);
         color: var(--special-lf2-color);
         font-weight: 500;
         position: relative;
@@ -78,7 +88,7 @@ header {
 }
 main {
     span{
-        font-size: var(--smaller-font-size);
+        font-size: var(--s-font-size);
         color: var(--tertiary-text-color);
         font-weight: 400;
         margin: 0;
@@ -109,7 +119,7 @@ main {
         border-radius: 1.875rem;
         a{
             color: var(--secondary-text-color);
-            font-size: 2.5rem;
+            font-size: var(--m-font-size);
             font-weight: 400;
             text-decoration: none;
         }
@@ -133,22 +143,22 @@ footer {
     }
     a {
         text-decoration: none;
-        font-size: var(--smaller-font-size);
+        font-size: var(--s-font-size);
         color: var(--primary-text-color);
     }
     hr {
-        margin:2.5rem 6.25rem 0 6.25rem;
+        margin:2.5rem var(--xxl-gap) 0 var(--xxl-gap);
     }
     p {
         margin-top: 2.5rem;
         text-align: right;
-        margin: 2.5rem 6.25rem 0 6.25rem;
+        margin: 2.5rem var(--xxl-gap) 0 var(--xxl-gap);
     }
 
 }
 
 .form {
-    margin-top: 6.5rem;
+    margin-top: var(--xxl-gap);
     margin-bottom: 2.375rem;
     display:grid;
     grid-template-columns: max-content max-content;
@@ -166,7 +176,7 @@ footer {
         background-color: var(--form-fill-color);
         border: 0.125rem solid;
         border-color: var(--primary-text-color);
-        border-radius: 0.25rem;
+        border-radius: var(--s-radius);
         padding: 0;
         margin: 0;
     }
@@ -178,7 +188,7 @@ footer {
         width: 63.75rem;
         background-color: var(--form-fill-color);
         border: 0.125rem solid;
-        border-radius: 0.25rem;
+        border-radius: var(--s-radius);
         padding: 0;
         margin: 0;
     }
@@ -193,7 +203,7 @@ footer {
 
 
     .upload_file::file-selector-button {
-        border-radius: 0.25rem;
+        border-radius: var(--s-radius);
         padding: 0 1rem;
         height: 2.5rem;
         cursor: pointer;
@@ -209,7 +219,7 @@ footer {
         background-color: var(--special-lf2-color);
         color: var(--secondary-text-color);
         border: solid var(--background-color);
-        border-radius: 1.25rem;
+        border-radius: var(--m-radius);
     }
     
 }
@@ -220,5 +230,37 @@ footer {
 
 
 }
-
+.entry_successful {
+    text-align: center;
+    margin-top: 10.25rem;
+    font-weight: 550;
+    font-size: var(--m-font-size);
+}
+.div_entry_id {
+    background-color: var(--special-lf2-color);
+    border-radius: var(--m-radius);
+    width: 33.33rem;
+    margin-left: 63.33rem;
+    color: var(--secondary-text-color);
+    .text_entry_id {
+        text-align: center;
+        padding-top: var(--m-gap);
+        font-size: var(--m-font-size);
+    }
+    .number_entry_id {
+        text-align: center;
+        padding-top: 0.75rem;
+        padding-bottom: var(--m-gap);
+        font-size: var(--m-font-size);
+    }
+}
+.note_entry_id {
+    text-align: center;
+    font-size: var(--m-font-size);
+    color: var(--tertiary-text-color);
+    font-weight: 350;
+    margin-top: var(--m-gap);
+    margin-bottom: 14rem;
+    line-height: 1.5;
+}
     
