@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --default-font-size: 16px;
+    --default-font-size: 12px;
     --smaller-font-size: 1.5rem;
     --font-main: 'Montserrat', sans-serif;
     --background-color: #FFFFFF;
@@ -41,10 +41,10 @@ textarea {
 }
 header {
     height: 29.375rem;
-    max-width: 100%;
     box-shadow: 5px 0px 10px var(--shadow);
     .header_logo_h {
         display: flex;
+        max-width: 100%;
         img {
             width: 28.9375rem;
             height: 25.5rem;
@@ -68,8 +68,9 @@ header {
         color: var(--special-lf2-color);
         font-weight: 500;
         position: relative;
+        height: 1.5rem;
         top: 3.75rem;
-        right: 5rem;
+        margin-left: 405.5px;
     }
     hr {
         margin: 0 6.25rem;
@@ -82,11 +83,11 @@ main {
         font-weight: 400;
         margin: 0;
         padding-top: 0.75rem;
-        padding-left: 70.375rem;
+        padding-left: 93.8rem;
         display: inline-block;
     }
     .new_request {
-        margin:2rem 40rem 0;
+        margin:2.7rem 53.3rem 0;
         height: var(--button-height);
         background-color: var(--special-lf2-color);
         text-align: center;
@@ -100,7 +101,7 @@ main {
         }
     }
     .check_existing_request {
-        margin: 5rem 43.4375rem 6.875rem;
+        margin: 6.6rem 57.9rem 9.166rem;
         height: var(--button-height);
         background-color: var(--special-lf2-color);
         text-align: center;
@@ -148,7 +149,7 @@ footer {
 
 .form {
     margin-top: 6.5rem;
-    margin-bottom: 13.75rem;
+    margin-bottom: 2.375rem;
     display:grid;
     grid-template-columns: max-content max-content;
     gap: 4.5625rem;
@@ -163,7 +164,9 @@ footer {
     input, select {
         width: 36.25rem;
         background-color: var(--form-fill-color);
+        border: 0.125rem solid;
         border-color: var(--primary-text-color);
+        border-radius: 0.25rem;
         padding: 0;
         margin: 0;
     }
@@ -174,29 +177,48 @@ footer {
         height: 31.25rem;
         width: 63.75rem;
         background-color: var(--form-fill-color);
+        border: 0.125rem solid;
+        border-radius: 0.25rem;
         padding: 0;
         margin: 0;
     }
 }
 .bottom_form {
     display: flex;
-    gap: 38.75rem;
+    gap: 22.334375rem;
     max-width: 100%;
     margin: 0;
+    margin-left: 36.24375rem;
+    margin-bottom: 13.8125rem;
 
 
-    .upload_file {
+    .upload_file::file-selector-button {
+        border-radius: 0.25rem;
+        padding: 0 1rem;
+        height: 2.5rem;
+        cursor: pointer;
         background-color: var(--background-color);
-        width: 12.5rem;
-        margin-left: 36.5625rem;
+        border: 0.125rem solid;
+        margin-right: 1rem;
     }
     .submit {
+        max-width: 100%;
         width: 12.5rem;
+        height: 5rem;
+        cursor: pointer;
+        background-color: var(--special-lf2-color);
+        color: var(--secondary-text-color);
+        border: solid var(--background-color);
+        border-radius: 1.25rem;
     }
     
 }
+.upload_note {
+    margin-bottom: 0.625rem;
+    margin-left: 6.25rem;
+    color: var(--tertiary-text-color);
 
 
-/* potřeba upravi CSS, zrušit flexbox - a upravovat vzdálenosti postupně od vrchu*/
+}
 
     
