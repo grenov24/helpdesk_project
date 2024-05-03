@@ -22,6 +22,8 @@
     
 
     --m-gap: 2rem;
+    --l-gap: 3rem;
+    --xl-gap: 5.5rem;
     --xxl-gap: 6.25rem;
 
 
@@ -87,8 +89,8 @@ header {
         margin: 0 6.25rem;
     }
 }
-main {
-    span{
+.main_index {
+    .index_note {
         font-size: var(--s-font-size);
         color: var(--tertiary-text-color);
         font-weight: 400;
@@ -273,12 +275,15 @@ footer {
     margin-bottom: 14rem;
     line-height: 1.5;
 }
-/* styl pro tabulku vložení číslá požadavku */
+/* prijaty_poz  */
 .search_request_h {
     text-align: center;
     margin-top: 10.25rem;
     font-weight: 550;
     font-size: var(--m-font-size);
+    span {
+        color: var(--special-lf2-color);
+    }
     }
 .search_request {
     text-align: center;
@@ -289,5 +294,40 @@ footer {
     margin-bottom: 14rem;
     border-radius: var(--m-radius);
     border-style:groove;
-    
+}
+.main_bulletin {
+    background-color: var(--form-background-color);
+    margin: 4.16rem 20.41rem 4.16rem 20.41rem;
+    h2 {
+        font-size: var(--l-font-size);
+        padding-top: var(--l-gap);
+        padding-left: var(--xl-gap);
+    }
+    hr {
+        width: 108.33rem;
+        padding-left: var(--xl-gap);
+        margin-top: var(--l-gap);
+        margin-bottom: 0;
+    }
+    div {
+        .request_text {
+            background-color: #E4002B;
+            width: 79.16rem;
+            height: 48.08rem;
+            margin-left: var(--xl-gap); 
+            margin-top: var(--xl-gap); 
+            h3 {
+                background-color: aqua;
+                font-weight: 500;
+                font-size: var(--m-font-size);
+                margin: 0;
+            }
+            div {
+                background-color: blueviolet;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+        
+    }
 }
