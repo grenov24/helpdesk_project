@@ -16,14 +16,11 @@
         <hr> 
     </header>
     <main>
-        <div>
-            <h2>Prosím vložte číslo vašeho požadavku:</h2>
-            <p>
-                <form action="kontrola_pozadavku.html" method="post" enctype="multipart/form-data">
-                    <input type="ntext" name="id_number" id="id_number" required>
-                    <!--odeslání jenom pomocí enter - enbo automatické po vyplnění správného formátu?-->
-                </form>
-            </p>
+        <h2 class="search_request_h">Prosím vložte číslo vašeho<br>požadavku:</h2>
+            <form action="kontrola_pozadavku.html" method="post" enctype="multipart/form-data">
+                <input class="search_request" type="ntext" name="id_number" id="id_number" placeholder="XXXXXXXX" required>
+                <!--odeslání jenom pomocí enter - enbo automatické po vyplnění správného formátu?-->
+            </form>
         </div>
     </main>
     <footer>
