@@ -20,7 +20,7 @@
     --without-edges: 107.5rem;
     --button-height: 13.125rem;
     
-
+    --s-gap: 0.5rem;
     --m-gap: 2rem;
     --l-gap: 3rem;
     --xl-gap: 5.5rem;
@@ -302,32 +302,76 @@ footer {
         font-size: var(--l-font-size);
         padding-top: var(--l-gap);
         padding-left: var(--xl-gap);
+        span {
+            color: var(--special-lf2-color);
+        }
     }
     hr {
-        width: 108.33rem;
-        padding-left: var(--xl-gap);
-        margin-top: var(--l-gap);
-        margin-bottom: 0;
+        margin: var(--l-gap) var(--xl-gap) 0 var(--xl-gap);
     }
     div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 2rem;
+        column-gap: var(--xl-gap);
         .request_text {
-            background-color: #E4002B;
-            width: 79.16rem;
-            height: 48.08rem;
-            margin-left: var(--xl-gap); 
-            margin-top: var(--xl-gap); 
+            flex-grow: 2;
+            flex-shrink: 3;
+            margin: var(--xl-gap) 0 0 var(--xl-gap);
             h3 {
-                background-color: aqua;
                 font-weight: 500;
                 font-size: var(--m-font-size);
                 margin: 0;
+                padding-bottom: var(--s-gap);
             }
             div {
-                background-color: blueviolet;
-                max-width: 100%;
-                max-height: 100%;
+                background-color: var(--background-color);
+                border-style: solid;
+                border-width: 2px;
+                max-width: 79.16rem;
+                height: 48.08rem;
+                padding: var(--s-gap) var(--s-gap) var(--s-gap) var(--s-gap);
             }
         }
-        
-    }
+        .request_status {
+            margin-top: 45.92rem;
+            margin-right: var(--xl-gap);
+            flex-grow: 0.5;
+            flex-shrink: 0;
+            h3 {
+                font-weight: 500;
+                font-size: var(--m-font-size);
+                margin: 0;
+                padding-bottom: var(--s-gap);
+            }
+            div {
+                background-color: var(--background-color);
+                border-style: solid;
+                border-width: 2px;
+                height: 7.75rem;
+                font-size: var(--m-font-size);
+                justify-content: center;
+                align-content: center;
+            }
+        } 
+        .request_comment {
+            flex-basis: 100%;
+            margin: var(--l-gap) var(--xl-gap) var(--l-gap) var(--xl-gap);
+            h3 {
+                font-weight: 500;
+                font-size: var(--m-font-size);
+                margin: 0;
+                padding-bottom: var(--s-gap);
+            }
+            div {
+                background-color: var(--background-color);
+                border-style: solid;
+                border-width: 2px;
+                height: 10rem;
+                padding: var(--s-gap) var(--s-gap) var(--s-gap) var(--s-gap);
+                color: var(--tertiary-text-color);
+            }
+        }      
+    } 
 }
