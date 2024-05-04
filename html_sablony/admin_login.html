@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Případ č.xxxx</title>
+    <title>Helpdesk</title>
 </head>
 <body>
     <header class="header_user">
@@ -15,23 +15,18 @@
         </div>
         <hr> 
     </header>
-    <main class="main_bulletin">
-        <h2>Požadavek č. <span>XXXX</span></h2>
-        <hr>
-        <div>
-            <section class="request_text">
-                <h3>Popis problému</h3>
-                <div>text problému.</div>
-            </section>
-            <section class="request_status">
-                <h3>Stav řízení</h2>
-                <div>Stav</div> 
-            </section>    
-            <section class="request_comment">
-                <h3>Poznámka technika</h3>
-                <div>poznámka text</div>
-            </section>
-        </div>
+    <main>
+        <h2>Přihlášení do správcovského rozhraní</h2>
+        <form action="admin_login.html" method="post" enctype="multipart/form-data">
+
+            <label for="email"><b>Emailová adresa:</b></label>
+            <input type="email" name="email" id="email" required>
+
+            <label for="password"><b>Heslo:</b></label>
+            <input type="password" name="password" id="password" required>
+
+            <input class="submit" type="submit" value="Příhlásit se">
+        </form>
     </main>
     <footer class="footer_user">
         <div>
@@ -40,8 +35,7 @@
             <a href="">Podmínky</a>
             <a href="">Kontakty</a>
         </div>
-        <hr>
-        <p>2024 &copy; domena.cz</p>
-    </footer>
+    <hr>
+    <p>2024 &copy; domena.cz</p>
+</footer>
 </body>
-</html>

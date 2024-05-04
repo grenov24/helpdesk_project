@@ -52,7 +52,7 @@ select {
     font-family: var(--font-main);
     font-size: var(--s-font-size);
 }
-header {
+.header_user {
     height: 29.375rem;
     box-shadow: 5px 0px 10px var(--shadow);
     .header_logo_h {
@@ -76,7 +76,7 @@ header {
 
         }
     }
-    a {
+    .login {
         font-size: var(--s-font-size);
         color: var(--special-lf2-color);
         font-weight: 500;
@@ -120,7 +120,7 @@ header {
         text-align: center;
         padding-top: 2.25rem;
         border-radius: 1.875rem;
-        a{
+        a {
             color: var(--secondary-text-color);
             font-size: var(--m-font-size);
             font-weight: 400;
@@ -129,8 +129,7 @@ header {
     }
 }
 
-footer {
-    
+.footer_user {
     padding-top: 5.625rem;
     padding-bottom: 5.625rem;
     background-color: var(--background-color);
