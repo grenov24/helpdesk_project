@@ -457,15 +457,10 @@ select {
         text-decoration: none;
         justify-content: center;
         align-content: center;
-
-        img {
-            width: 1.8rem;
-            height: 1.8rem;
-        }
     }
 
     .all_requests {
-        background-color: var(--admin-dark-color);
+        background-color: var(--admin-medium-color);
         color: var(--secondary-text-color);
         margin-right: var(--xl-gap);
         margin-bottom: 2rem;
@@ -475,12 +470,11 @@ select {
         text-decoration: none;
         justify-content: center;
         align-content: center;
-
-        img {
-            width: 2rem;
-            height: 2rem;
-        }
     }
+    a:hover:not(.active) {
+        background-color: #4B49AC;
+        color: var(--secondary-text-color);
+      }
 }
 
 .admin_nav {
@@ -544,8 +538,9 @@ select {
                 font-weight: 500;
                 font-size: 1.5rem;
             }
-            .form_position {
+            .form_technician {
                 margin-left: auto;
+                border-radius: var(--m-radius);
             }
             .technician_tile {
                 background-color: var(--background-color);
@@ -575,20 +570,24 @@ select {
                 flex-shrink: 4;
                 flex-grow: 2;
             }
+            .form_status{
+                margin-left: auto;
+                border-radius: var(--m-radius);
+                margin-bottom: 4.5rem;
+            }
             .status_tile {
                 background-color: var(--background-color);
                 border-radius: var(--m-radius);
                 padding-left: 1rem;
-                margin-top: 1.5rem;
+                margin-top: 4.5rem;
                 margin-right: 1.5rem;
-                height: 6rem;
-                align-content: center;
+                height: 3rem;
                 font-weight: 500;
-                font-size: 2.5rem;
                 margin-left: auto;
                 align-content: center;
                 text-align: center;
                 flex-grow: 0.45;
+                border: 0;
             }
 
         }
@@ -598,6 +597,22 @@ select {
             width: 111.666rem;
             height: 13.75rem;
             max-width: 100%;
+            margin-bottom: 3rem;
         }
     }
+    .page_cards {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        gap: 5rem;
+        a {
+            background-color: var(--admin-medium-color);
+            padding: 1.5rem;
+            text-align: center;
+            border-radius: var(--m-radius);
+            color: var(--secondary-text-color);
+            font-weight: 450;
+            text-decoration: none;
+            }
+        }
 }

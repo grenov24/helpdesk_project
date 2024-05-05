@@ -11,11 +11,9 @@
         <img src="image.png" alt="logo_lf2_long" class="logo">
         <a href="" class="my_requests">
             Mé požadavky
-            <img src="user_icon.png">
         </a>
         <a href="" class="all_requests">
             Požadavky všech
-            <img src="all_users_icon.png">
         </a>
     </header>
     <nav class="admin_nav">
@@ -33,7 +31,7 @@
                 <div class="request_number_tile">
                     číslo požadavku
                 </div>
-                <form class="form_position" action="admin.html" method="post" enctype="multipart/form-data">
+                <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
                     <select class="technician_tile" name="technician" id="technician">
                         <option value="not_taken"></option>
                         <option value="Václav">Václav</option>
@@ -49,9 +47,15 @@
                 <div class="text_tile">
                     text požadavku
                 </div>
-                <div class="status_tile">
-                    stav
-                </div>
+                <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
+                    <select class="status_tile" name="status" id="status">
+                        <option value="recieved">Přijato</option>
+                        <option value="solving">V řešení</option>
+                        <option value="drop">Odloženo</option>
+                        <option value="finished">Hotovo</option>
+                    <!--potřeba promyslet, jestli je nabídka dostačující-->
+                    </select>
+                </form>
             </div>
 <!--duplikat pro sledování chování flexu-->
             <div class="request_tile2">
@@ -69,11 +73,9 @@
                 </div>
             </div>
         </div>
-        <div class="previous_card">
-            Předchozí
-        </div>
-        <div class="next_card">
-            Další
+        <div class="page_cards">
+            <a href=""> Předchozí</a>
+            <a href=""> Další</a>
         </div>
     </main>
 </body>
