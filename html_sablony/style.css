@@ -23,7 +23,7 @@
     --shadow: rgba(0, 0, 0, 0.25);
     --without-edges: 107.5rem;
     --button-height: 13.125rem;
-    
+
     --s-gap: 0.5rem;
     --m-gap: 2rem;
     --l-gap: 3rem;
@@ -34,18 +34,26 @@
     --s-radius: 0.25rem;
     --m-radius: 1.25rem;
 }
+
 html {
     font-size: var(--default-font-size);
 }
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
+}
+.admin_body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-admin-color);
 }
 body,
 input,
@@ -56,23 +64,28 @@ select {
     font-family: var(--font-main);
     font-size: var(--s-font-size);
 }
+
 .header_user {
     height: 29.375rem;
     box-shadow: 5px 0px 10px var(--shadow);
+
     .header_logo_h {
         display: flex;
         max-width: 100%;
+
         img {
             width: 28.9375rem;
             height: 25.5rem;
             margin: 0 0 0 2.5rem;
         }
+
         h1 {
             font-size: 4.375rem;
             font-weight: 550;
             width: 80.1875rem;
             max-width: 100%;
             align-self: center;
+
             span {
                 color: var(--special-lf2-color);
                 font-weight: 700;
@@ -80,6 +93,7 @@ select {
 
         }
     }
+
     .login {
         font-size: var(--s-font-size);
         color: var(--special-lf2-color);
@@ -89,6 +103,7 @@ select {
         top: 3.75rem;
         margin-left: 405.5px;
     }
+
     hr {
         margin: 0 6.25rem;
     }
@@ -103,8 +118,9 @@ select {
     padding-top: 0.75rem;
     margin-left: 93.8rem;
 }
+
 .new_request {
-    display:block;
+    display: block;
     margin: var(--l-gap) 53.33rem var(--l-gap) 53.33rem;
     height: var(--button-height);
     background-color: var(--special-lf2-color);
@@ -120,7 +136,7 @@ select {
 }
 
 .check_existing_request {
-    display:block;
+    display: block;
     margin: 0 57.9rem 9rem 57.9rem;
     height: var(--button-height);
     background-color: var(--special-lf2-color);
@@ -140,23 +156,28 @@ select {
     padding-bottom: 5.625rem;
     background-color: var(--background-color);
     box-shadow: 5px 0px 10px var(--shadow);
+
     div {
         display: flex;
         gap: 3.75rem;
         align-items: flex-end;
-        margin:0 6.25rem 0 6.25rem;
+        margin: 0 6.25rem 0 6.25rem;
+
         a:first-of-type {
             margin-left: auto;
         }
     }
+
     a {
         text-decoration: none;
         font-size: var(--s-font-size);
         color: var(--primary-text-color);
     }
+
     hr {
-        margin:2.5rem var(--xxl-gap) 0 var(--xxl-gap);
+        margin: 2.5rem var(--xxl-gap) 0 var(--xxl-gap);
     }
+
     p {
         margin-top: 2.5rem;
         text-align: right;
@@ -168,17 +189,20 @@ select {
 .form {
     margin-top: var(--xxl-gap);
     margin-bottom: 2.375rem;
-    display:grid;
+    display: grid;
     grid-template-columns: max-content max-content;
     gap: 4.5625rem;
     grid-gap: 2.8125rem;
+
     label {
         text-align: right;
         margin-left: 14.875rem;
     }
+
     .label_gap {
         margin-top: 5rem;
     }
+
     input {
         width: 30rem;
         background-color: var(--form-fill-color);
@@ -188,6 +212,7 @@ select {
         padding: 0;
         margin: 0;
     }
+
     select {
         width: 25rem;
         background-color: var(--form-fill-color);
@@ -197,9 +222,11 @@ select {
         padding: 0;
         margin: 0;
     }
+
     .location {
         width: 50rem;
     }
+
     textarea {
         height: 31.25rem;
         width: 63.75rem;
@@ -210,6 +237,7 @@ select {
         margin: 0;
     }
 }
+
 .bottom_form {
     display: flex;
     gap: 22.334375rem;
@@ -228,6 +256,7 @@ select {
         border: 0.125rem solid;
         margin-right: 1rem;
     }
+
     .submit {
         max-width: 100%;
         width: 12.5rem;
@@ -238,8 +267,9 @@ select {
         border: solid var(--background-color);
         border-radius: var(--m-radius);
     }
-    
+
 }
+
 .upload_note {
     margin-bottom: 0.625rem;
     margin-left: 6.25rem;
@@ -247,23 +277,27 @@ select {
 
 
 }
+
 .entry_successful {
     text-align: center;
     margin-top: 10.25rem;
     font-weight: 550;
     font-size: var(--m-font-size);
 }
+
 .div_entry_id {
     background-color: var(--special-lf2-color);
     border-radius: var(--m-radius);
     width: 33.33rem;
     margin-left: 63.33rem;
     color: var(--secondary-text-color);
+
     .text_entry_id {
         text-align: center;
         padding-top: var(--m-gap);
         font-size: var(--m-font-size);
     }
+
     .number_entry_id {
         text-align: center;
         padding-top: 0.75rem;
@@ -271,6 +305,7 @@ select {
         font-size: var(--m-font-size);
     }
 }
+
 .note_entry_id {
     text-align: center;
     font-size: var(--m-font-size);
@@ -280,16 +315,19 @@ select {
     margin-bottom: 14rem;
     line-height: 1.5;
 }
+
 /* prijaty_poz  */
 .search_request_h {
     text-align: center;
     margin-top: 10.25rem;
     font-weight: 550;
     font-size: var(--m-font-size);
+
     span {
         color: var(--special-lf2-color);
     }
-    }
+}
+
 .search_request {
     text-align: center;
     height: 5rem;
@@ -298,38 +336,46 @@ select {
     margin-left: 67.5rem;
     margin-bottom: 14rem;
     border-radius: var(--m-radius);
-    border-style:groove;
+    border-style: groove;
 }
+
 .main_bulletin {
     background-color: var(--form-background-color);
     margin: 4.16rem 20.41rem 4.16rem 20.41rem;
+
     h2 {
         font-size: var(--l-font-size);
         padding-top: var(--l-gap);
         padding-left: var(--xl-gap);
+
         span {
             color: var(--special-lf2-color);
         }
     }
+
     hr {
         margin: var(--l-gap) var(--xl-gap) 0 var(--xl-gap);
     }
+
     div {
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 2rem;
         column-gap: var(--xl-gap);
+
         .request_text {
             flex-grow: 2;
             flex-shrink: 3;
             margin: var(--xl-gap) 0 0 var(--xl-gap);
+
             h3 {
                 font-weight: 500;
                 font-size: var(--m-font-size);
                 margin: 0;
                 padding-bottom: var(--s-gap);
             }
+
             div {
                 background-color: var(--background-color);
                 border-style: solid;
@@ -339,17 +385,20 @@ select {
                 padding: var(--s-gap) var(--s-gap) var(--s-gap) var(--s-gap);
             }
         }
+
         .request_status {
             margin-top: 45.92rem;
             margin-right: var(--xl-gap);
             flex-grow: 0.5;
             flex-shrink: 0;
+
             h3 {
                 font-weight: 500;
                 font-size: var(--m-font-size);
                 margin: 0;
                 padding-bottom: var(--s-gap);
             }
+
             div {
                 background-color: var(--background-color);
                 border-style: solid;
@@ -359,16 +408,19 @@ select {
                 justify-content: center;
                 align-content: center;
             }
-        } 
+        }
+
         .request_comment {
             flex-basis: 100%;
             margin: var(--l-gap) var(--xl-gap) var(--l-gap) var(--xl-gap);
+
             h3 {
                 font-weight: 500;
                 font-size: var(--m-font-size);
                 margin: 0;
                 padding-bottom: var(--s-gap);
             }
+
             div {
                 background-color: var(--background-color);
                 border-style: solid;
@@ -377,18 +429,23 @@ select {
                 padding: var(--s-gap) var(--s-gap) var(--s-gap) var(--s-gap);
                 color: var(--tertiary-text-color);
             }
-        }      
-    } 
+        }
+    }
 }
+
 .admin_header {
     display: flex;
     align-items: flex-end;
     gap: var(--l-gap);
     box-shadow: 5px 0px 10px var(--shadow);
+    position: relative;
+    z-index: 1;
+    background-color: var(--background-color);
     .logo {
         width: 39.75rem;
         height: 8.33rem;
     }
+
     .my_requests {
         background-color: var(--admin-medium-color);
         color: var(--secondary-text-color);
@@ -400,11 +457,13 @@ select {
         text-decoration: none;
         justify-content: center;
         align-content: center;
+
         img {
             width: 1.8rem;
             height: 1.8rem;
         }
     }
+
     .all_requests {
         background-color: var(--admin-dark-color);
         color: var(--secondary-text-color);
@@ -416,10 +475,129 @@ select {
         text-decoration: none;
         justify-content: center;
         align-content: center;
+
         img {
             width: 2rem;
             height: 2rem;
         }
     }
-    
+}
+
+.admin_nav {
+    margin: 0;
+    padding: 0;
+    width: 25.83rem;
+    min-height: 100%;
+    position: fixed;
+    background-color: var(--background-color);
+    a {
+        display: block;
+        padding: 1rem 0 1rem 0.5rem;
+        text-decoration: none;
+        color: var(--primary-text-color);
+        font-size: var(--s-font-size);
+        margin: 1rem 4rem 1rem 0;
+        border-radius:0 var(--m-radius) var(--m-radius) 0;
+        background-color: #F1F1F1;
+    }
+    a:first-child {
+        margin-top: 5rem;
+    }
+    a:hover:not(.active) {
+        background-color: #4B49AC;
+        color: var(--secondary-text-color);
+      }
+}
+.admin_main {
+    background-color: var(--background-color);
+    margin: 5rem 7.16rem 5rem 33rem;
+    padding: 2.5rem 5rem 2.5rem 5rem;
+    h2 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    .request_tile_flex {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        :hover:not(.active) {
+            background-color: #4B49AC;
+          }
+        .request_tile {
+            background-color: var(--admin-light-color);
+            border-radius: var(--m-radius);
+            width: 111.666rem;
+            height: 13.75rem;
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 8.8rem;
+            .request_number_tile {
+                background-color: var(--background-color);
+                border-radius: var(--m-radius);
+                padding-left: 1rem;
+                margin-top: 1.5rem;
+                margin-left: 1.5rem;
+                height: 3.5rem;
+                width: 16.5rem;
+                align-content: center;
+                font-weight: 500;
+                font-size: 1.5rem;
+            }
+            .form_position {
+                margin-left: auto;
+            }
+            .technician_tile {
+                background-color: var(--background-color);
+                border-radius: var(--m-radius);
+                padding-left: 1rem;
+                margin-top: 1.5rem;
+                margin-right: 1.5rem;
+                height: 3.5rem;
+                width: 16.5rem;
+                align-content: center;
+                font-weight: 500;
+                font-size: 1.5rem;
+                border: 0;
+            }
+            .break {
+                flex-basis: 100%;
+            }
+            .text_tile {
+                background-color: var(--background-color);
+                border-radius: var(--m-radius);
+                padding-left: 1rem;
+                padding-top: 0.5rem;
+                margin-top: 1.5rem;
+                margin-left: 1.5rem;
+                margin-bottom: 1.5rem;
+                height: 6rem;
+                flex-shrink: 4;
+                flex-grow: 2;
+            }
+            .status_tile {
+                background-color: var(--background-color);
+                border-radius: var(--m-radius);
+                padding-left: 1rem;
+                margin-top: 1.5rem;
+                margin-right: 1.5rem;
+                height: 6rem;
+                align-content: center;
+                font-weight: 500;
+                font-size: 2.5rem;
+                margin-left: auto;
+                align-content: center;
+                text-align: center;
+                flex-grow: 0.45;
+            }
+
+        }
+        .request_tile2 {
+            background-color: var(--admin-light-color);
+            border-radius: var(--m-radius);
+            width: 111.666rem;
+            height: 13.75rem;
+            max-width: 100%;
+        }
+    }
 }
