@@ -18,7 +18,7 @@
     --admin-dark-color: #4B49AC;
 
     --form-background-color: #EAEAEA;
-    --form-fill-color: #EAEAEA;
+    --form_darker_color: #C1C1C1;
 
     --shadow: rgba(0, 0, 0, 0.25);
     --without-edges: 107.5rem;
@@ -71,6 +71,7 @@ select {
 .header_user {
     height: 29.375rem;
     box-shadow: 5px 0px 10px var(--shadow);
+    background-color: var(--background-color);
 
     .header_logo_h {
         display: flex;
@@ -102,7 +103,7 @@ select {
         color: var(--special-lf2-color);
         font-weight: 500;
         height: 1.5rem;
-        position: fixed;
+        position: absolute;
         right: var(--xl-gap);
         top: var(--l-gap)
     }
@@ -301,7 +302,10 @@ select {
     background-color: var(--special-lf2-color);
     border-radius: var(--m-radius);
     width: 33.33rem;
-    margin-left: 63.33rem;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: center;
     color: var(--secondary-text-color);
 
     .text_entry_id {
@@ -341,11 +345,15 @@ select {
 }
 
 .search_request {
+    display: block;
+    justify-content: center;
+    align-content: center;
     text-align: center;
     height: 5rem;
     width: 25rem;
     font-size: var(--m-font-size);
-    margin-left: 67.5rem;
+    margin-right: auto;
+    margin-left: auto;
     margin-bottom: 14rem;
     border-radius: var(--m-radius);
     border-style: groove;
@@ -354,7 +362,7 @@ select {
 
 /* admin rozhraní */
 .main_bulletin {
-    background-color: var(--form-background-color);
+    background-color: var(--form_darker_color);
     margin: 4.16rem 20.41rem 4.16rem 20.41rem;
 
     h2 {
@@ -379,7 +387,7 @@ select {
         column-gap: var(--xl-gap);
 
         .request_text {
-            flex-grow: 2;
+            flex-grow: 3;
             flex-shrink: 3;
             margin: var(--xl-gap) 0 0 var(--xl-gap);
 
@@ -394,30 +402,22 @@ select {
                 background-color: var(--background-color);
                 border-style: solid;
                 border-width: 2px;
-                max-width: 79.16rem;
+                max-width: 80%;
                 height: 48.08rem;
                 padding: var(--s-gap) var(--s-gap) var(--s-gap) var(--s-gap);
             }
         }
 
         .request_status {
-            margin-top: 45.92rem;
+            margin-top: 51.5rem;
             margin-right: var(--xl-gap);
-            flex-grow: 0.5;
+            flex-grow: 0.3;
             flex-shrink: 0;
-
-            h3 {
-                font-weight: 500;
-                font-size: var(--m-font-size);
-                margin: 0;
-                padding-bottom: var(--s-gap);
-            }
-
             div {
                 background-color: var(--background-color);
                 border-style: solid;
                 border-width: 2px;
-                height: 7.75rem;
+                height: 5.75rem;
                 font-size: var(--m-font-size);
                 justify-content: center;
                 align-content: center;
