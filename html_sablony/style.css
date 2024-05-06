@@ -128,7 +128,7 @@ select {
     display: block;
     margin: auto;
     width: 30%;
-    margin-top: var(--l-gap);
+    margin-top: 12rem;
     margin-bottom: var(--l-gap);
     height: var(--button-height);
     background-color: var(--special-lf2-color);
