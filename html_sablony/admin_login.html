@@ -11,21 +11,21 @@
         <div class="header_logo_h">
             <img src="logo.png" alt="logo_lf2">
             <h1>HELPDESK <span>2.LF UK</span> -<br/>POMOC S VÝPOČETNÍ TECHNIKOU</h1>
-            <a href="">Přihlásit se</a>
+            <a href="" class="login">Přihlásit se</a>
         </div>
         <hr> 
     </header>
-    <main>
+    <main class="admin_login">
         <h2>Přihlášení do správcovského rozhraní</h2>
         <form action="admin_login.html" method="post" enctype="multipart/form-data">
-
-            <label for="email"><b>Emailová adresa:</b></label>
-            <input type="email" name="email" id="email" required>
-
-            <label for="password"><b>Heslo:</b></label>
-            <input type="password" name="password" id="password" required>
-
-            <input class="submit" type="submit" value="Příhlásit se">
+            
+            <label id="label_login" for="email">Emailová adresa:</label>
+            <input id="input_login" type="email" name="email" id="email" required>
+            
+            <label id="label_login" for="password">Heslo:</label>
+            <input id="input_login" type="password" name="password" id="password" required>
+            
+            <input class="submit_login" class="submit" type="submit" value="Příhlásit se">
         </form>
     </main>
     <footer class="footer_user">

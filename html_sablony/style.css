@@ -17,7 +17,7 @@
     --admin-medium-color: #7978E9;
     --admin-dark-color: #4B49AC;
 
-    --form-background-color: #C1C1C1;
+    --form-background-color: #EAEAEA;
     --form-fill-color: #EAEAEA;
 
     --shadow: rgba(0, 0, 0, 0.25);
@@ -48,7 +48,10 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
+    background-color: var(--form-background-color);
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 20.0275rem;
 }
 .admin_body{
     margin: 0;
@@ -98,10 +101,10 @@ select {
         font-size: var(--s-font-size);
         color: var(--special-lf2-color);
         font-weight: 500;
-        position: relative;
         height: 1.5rem;
-        top: 3.75rem;
-        margin-left: 405.5px;
+        position: fixed;
+        right: var(--xl-gap);
+        top: var(--l-gap)
     }
 
     hr {
@@ -116,12 +119,17 @@ select {
     color: var(--tertiary-text-color);
     font-weight: 400;
     padding-top: 0.75rem;
-    margin-left: 93.8rem;
+    position: absolute;
+    right: var(--xxl-gap);
+    top: 29.3rem;
 }
 
 .new_request {
     display: block;
-    margin: var(--l-gap) 53.33rem var(--l-gap) 53.33rem;
+    margin: auto;
+    width: 30%;
+    margin-top: var(--l-gap);
+    margin-bottom: var(--l-gap);
     height: var(--button-height);
     background-color: var(--special-lf2-color);
     text-align: center;
@@ -137,7 +145,9 @@ select {
 
 .check_existing_request {
     display: block;
-    margin: 0 57.9rem 9rem 57.9rem;
+    margin: auto;
+    width: 25%;
+    margin-bottom: 9rem;
     height: var(--button-height);
     background-color: var(--special-lf2-color);
     text-align: center;
@@ -156,7 +166,9 @@ select {
     padding-bottom: 5.625rem;
     background-color: var(--background-color);
     box-shadow: 5px 0px 10px var(--shadow);
-
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     div {
         display: flex;
         gap: 3.75rem;
@@ -205,7 +217,7 @@ select {
 
     input {
         width: 30rem;
-        background-color: var(--form-fill-color);
+        background-color: var(--background-color);
         border: 0.125rem solid;
         border-color: var(--primary-text-color);
         border-radius: var(--s-radius);
@@ -215,7 +227,7 @@ select {
 
     select {
         width: 25rem;
-        background-color: var(--form-fill-color);
+        background-color: var(--background-color);
         border: 0.125rem solid;
         border-color: var(--primary-text-color);
         border-radius: var(--s-radius);
@@ -230,7 +242,7 @@ select {
     textarea {
         height: 31.25rem;
         width: 63.75rem;
-        background-color: var(--form-fill-color);
+        background-color: var(--background-color);
         border: 0.125rem solid;
         border-radius: var(--s-radius);
         padding: 0;
@@ -264,7 +276,7 @@ select {
         cursor: pointer;
         background-color: var(--special-lf2-color);
         color: var(--secondary-text-color);
-        border: solid var(--background-color);
+        border: solid var(--form-fill-color);
         border-radius: var(--m-radius);
     }
 
@@ -339,6 +351,8 @@ select {
     border-style: groove;
 }
 
+
+/* admin rozhraní */
 .main_bulletin {
     background-color: var(--form-background-color);
     margin: 4.16rem 20.41rem 4.16rem 20.41rem;
@@ -432,6 +446,42 @@ select {
         }
     }
 }
+.admin_login {
+    h2 {
+        text-align: center;
+        padding-top: var(--xl-gap);
+        margin-top: var(--xl-gap);
+    }
+    form {
+        margin: var(--xxl-gap) auto;
+        padding-bottom: var(--xl-gap);
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        #label_login {
+            padding-top: 1.5rem;
+            padding-bottom: 0.5rem;
+        }
+        #input_login {
+            height: 3rem;
+            background-color: var(--background-color);
+            padding: 0;
+            border: 0.15rem solid;
+            
+            cursor: pointer;
+            text-align: center;
+        }
+        .submit_login {
+            height: 4rem;
+            margin-top: var(--l-gap);
+            margin-left: auto;
+            cursor: pointer;
+            background-color: var(--background-color);
+            border: 0.15rem solid black;
+            border-radius: var(--m-radius);
+            }
+    }
+}
 
 .admin_header {
     display: flex;
@@ -520,7 +570,8 @@ select {
         .request_tile {
             background-color: var(--admin-light-color);
             border-radius: var(--m-radius);
-            width: 111.666rem;
+            width: 100%;
+            margin-right: auto;
             height: 13.75rem;
             max-width: 100%;
             display: flex;
@@ -594,7 +645,8 @@ select {
         .request_tile2 {
             background-color: var(--admin-light-color);
             border-radius: var(--m-radius);
-            width: 111.666rem;
+            width: 100%;
+            margin-right: auto;
             height: 13.75rem;
             max-width: 100%;
             margin-bottom: 3rem;
@@ -605,6 +657,9 @@ select {
         align-content: center;
         justify-content: center;
         gap: 5rem;
+        :hover:not(.active) {
+            background-color: #4B49AC;
+          }
         a {
             background-color: var(--admin-medium-color);
             padding: 1.5rem;
