@@ -107,7 +107,7 @@ select {
     }
 }
 
-
+/*------------- index.html ---------------*/
 
 .index_note {
     font-size: var(--s-font-size);
@@ -152,14 +152,14 @@ select {
     font-weight: 400;
     text-decoration: none;
 }
-
+/*------------- formular_n_poz.html ---------------*/
 .form {
     margin-top: var(--xxl-gap);
     margin-bottom: 2.375rem;
     display: grid;
     grid-template-columns: max-content max-content;
-    gap: 4.5625rem;
-    grid-gap: 2.8125rem;
+    gap: 4.56rem;
+    grid-gap: 2.81rem;
 
     label {
         text-align: right;
@@ -208,10 +208,8 @@ select {
 .bottom_form {
     display: flex;
     gap: 22.334375rem;
-    max-width: 100%;
     margin: 0;
-    margin-left: 36.24375rem;
-    margin-bottom: 13.8125rem;
+    margin-left: 36.24rem;
 
 
     .upload_file::file-selector-button {
@@ -225,7 +223,6 @@ select {
     }
 
     .submit {
-        max-width: 100%;
         width: 12.5rem;
         height: 5rem;
         cursor: pointer;
@@ -238,13 +235,14 @@ select {
 }
 
 .upload_note {
+    margin-top: 13.81rem;
     margin-bottom: 0.625rem;
     margin-left: 6.25rem;
     color: var(--tertiary-text-color);
 
 
 }
-
+/*------------- prijaty_poz.html -------------*/
 .entry_successful {
     text-align: center;
     margin-top: 10.25rem;
@@ -286,7 +284,7 @@ select {
     line-height: 1.5;
 }
 
-/* prijaty_poz  */
+/*------------- kontrola_poz.html -------------*/
 .search_request_h {
     text-align: center;
     margin-top: 10.25rem;
@@ -314,7 +312,7 @@ select {
 }
 
 
-/* admin rozhraní */
+/*------------- kontrola_poz_prehled.html -------------*/
 .main_bulletin {
     background-color: var(--form_darker_color);
     margin: 4.16rem 20.41rem 4.16rem 20.41rem;
@@ -400,7 +398,7 @@ select {
         }
     }
 }
-
+/*------------- footer_user -------------*/
 .footer_user {
     padding-top: 5.625rem;
     padding-bottom: 5.625rem;
@@ -437,7 +435,7 @@ select {
     }
 
 }
-
+/*------------- admin_login.html -------------*/
 .admin_login {
     h2 {
         text-align: center;
@@ -474,7 +472,7 @@ select {
             }
     }
 }
-
+/*------------- admin.html -------------*/
 .admin_header {
     display: flex;
     align-items: flex-end;
@@ -686,6 +684,23 @@ select {
     .check_existing_request {
         font-size: 160%;
     }
+    .form {
+        label {
+            margin-left: 5rem;
+        }
+        textarea {
+            width: 51rem;
+        }
+    }
+    
+    .bottom_form {
+        margin-left: 26.36rem;
+        flex-wrap: wrap;
+        gap: 9.56rem;
+        
+    }
+
+
 }
 
 @media screen and (max-width: 1001px) {
@@ -724,6 +739,33 @@ select {
     .check_existing_request {
         width: 70% ;
     }
+    .form {
+        grid-template-columns: max-content;
+        margin-left: var(--l-gap);
+        gap: var(--s-gap);
+        label {
+            margin-left: 0;
+            text-align: left;
+        }
+        .label_gap {
+            margin-top:0;
+        }
+        input {
+            height: 3rem;
+        }
+        select {
+            height: 3rem;
+        }
+        textarea {
+            height: 17rem;
+        }
+    }
+    .bottom_form {
+        margin-left: var(--l-gap);
+        margin-right: 10rem;
+        gap: var(--l-gap);
+    }
+    
 }
 @media screen and (max-width: 665px) {
     .header_user {
@@ -733,7 +775,6 @@ select {
             }
             h1 {
                 margin-left: var(--l-gap);
-                
             }
         }
     }
@@ -744,8 +785,8 @@ select {
     }
 
     .footer_user {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: var(--l-gap);
+        padding-bottom: var(--l-gap);
         div {
             gap: var(--m-gap);
             margin-left: var(--l-gap);
@@ -763,14 +804,45 @@ select {
             text-align: center;
         }
     }
+    .form {
+        .location {
+            width: 30rem;
+        }
+        textarea {
+            width: 30rem;
+        }
+    }
+    .upload_note {
+        margin-left: var(--l-gap);
+        margin-top: 1rem;
+        font-size: 1.25rem;
+        
+    }
+
 }
 
 @media screen and (max-width: 501px) {
-
     .footer_user {
         font-size: 80%;
         div {
             flex-wrap: wrap;
         }
+    }
+    .form {
+        input{
+            width: 25rem;
+            height: 3.5rem;
+        }
+        .location {
+            width: 25rem;
+            height: 3.5rem;
+        }
+        textarea {
+            width: 25rem;
+        }
+        select {
+            height: 3.5rem;
+        }
+        
     }
 }
