@@ -76,8 +76,6 @@ select {
 
     .header_logo_h {
         display: flex;
-        max-width: 100%;
-
         img {
             margin: 0 0 0 2.5rem;
         }
@@ -96,6 +94,7 @@ select {
 
         }
         .login {
+             
             font-size: var(--s-font-size);
             color: var(--special-lf2-color);
             font-weight: 500;
@@ -739,7 +738,8 @@ select {
         }
     }
     .index_note {
-        margin-left: 30%;
+        text-align: center;
+        margin-left: 0;
         font-size: 80%;
     }
 
@@ -747,15 +747,30 @@ select {
         padding-top: 3rem;
         padding-bottom: 3rem;
         div {
-            gap:var(--m-gap);
-            flex-wrap: wrap;
+            gap: var(--m-gap);
+            margin-left: var(--l-gap);
+            margin-right: var(--l-gap);
+            align-items: center;
+            justify-content: center;
+            a:first-of-type {
+                margin-left: 0;
             }
         }
         hr {
-            margin:2.5rem var(var(--l-gap)) 0 var(var(--l-gap));
+            margin: 2.5rem var(--l-gap) 0 var(--l-gap);
         }
         p {
-            margin:2.5rem var(var(--l-gap)) 0 var(var(--l-gap));
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 501px) {
+
+    .footer_user {
+        font-size: 80%;
+        div {
+            flex-wrap: wrap;
         }
     }
 }
