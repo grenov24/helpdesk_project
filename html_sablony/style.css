@@ -737,7 +737,7 @@ select {
             .login_icon {
                 display: block;
                 position: absolute;
-                /*max-width: fit-content;*/
+                max-width: fit-content;
                 top: var(--l-gap);
                 right: var(--l-gap);
             }

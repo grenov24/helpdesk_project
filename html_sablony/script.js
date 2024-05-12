@@ -5,39 +5,47 @@
 
 
 
-
-
-
-
-//nahrazení "přihlásit se" za iconu při zmenšení stránky na rozlišení 1001px
 const headerUserInterface = document.getElementsByClassName('header_logo_h')[0];
 const loginText = document.getElementsByClassName('login')[0];
 
-function createLoginIcon(linkUrl, imgUrl) {
+
+function createImageLink(linkUrl, imgUrl) {
+    const linkElement = document.createElement('a');
+    linkElement.setAttribute('href', linkUrl);
+  
     
-    const linkIcon = document.createElement('a');
-    linkIcon.setAttribute('href', linkUrl);
-
-    const imgIcon = document.createElement('img');
-    imgIcon.setAttribute('src', imgUrl);
-
-    linkIcon.appendChild(imgIcon);
-
-    linkIcon.classList.add('login_icon');
+    const imgElement = document.createElement('img');
+  
     
+    imgElement.setAttribute('src', imgUrl);
+  
+    linkElement.appendChild(imgElement);
+  
+    linkElement.classList.add('login_icon');
+    return linkElement;
+  }
 
-    return linkIcon;
-}
-var mediaQuery = window.matchMedia('(max-width: 1000px)');
-
-function replaceTextWithIcon() {
-    if (mediaQuery.matches) {
-        loginText.remove();
-        headerUserInterface.append(
-            createLoginIcon("admin_login.html", "user.svg")
-        );
+const mediaQueryMax = window.matchMedia('(max-width: 1000px)');
+var linkElement;
+function changeToIcon() {
+if (mediaQueryMax.matches) {
+    if (!linkElement) {
+    linkElement = createImageLink('https://example.com', 'user.svg');
+    headerUserInterface.appendChild(linkElement);
+    loginText.remove()
     }
 }
-replaceTextWithIcon();
+else {
+    if (linkElement) {
+    linkElement.remove();
+    linkElement = null;
+    headerUserInterface.appendChild(loginText);
+    }
+}   
+}
+changeToIcon();
 
-mediaQuery.addListener(replaceTextWithIcon);
+
+mediaQueryMax.addListener(changeToIcon);
+
+  
