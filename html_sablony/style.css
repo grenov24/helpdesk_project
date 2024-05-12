@@ -521,7 +521,7 @@ select {
     padding: 0;
     width: 25.83rem;
     min-height: 100%;
-    position: fixed;
+    position: absolute;
     background-color: var(--background-color);
     a {
         display: block;
@@ -727,20 +727,17 @@ select {
     .header_user {
         height: 60%;
         .header_logo_h {
-            img {
-                width: 60%;
+            .logo {
+                width: 80%;
             }
             h1 {
                 font-size: var(--m-font-size);
                 margin-right: 8rem;
             }
-            a {
-                display: none;
-            }
             .login_icon {
-                display: inline;
-                width: 2rem;
+                display: block;
                 position: absolute;
+                /*max-width: fit-content;*/
                 top: var(--l-gap);
                 right: var(--l-gap);
             }
