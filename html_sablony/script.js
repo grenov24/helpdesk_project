@@ -11,6 +11,7 @@
 
 //nahrazení "přihlásit se" za iconu při zmenšení stránky na rozlišení 1001px
 const headerUserInterface = document.getElementsByClassName('header_logo_h')[0];
+const loginText = document.getElementsByClassName('login')[0];
 
 function createLoginIcon(linkUrl, imgUrl) {
     
@@ -21,12 +22,22 @@ function createLoginIcon(linkUrl, imgUrl) {
     imgIcon.setAttribute('src', imgUrl);
 
     linkIcon.appendChild(imgIcon);
+
     linkIcon.classList.add('login_icon');
     
 
     return linkIcon;
 }
+var mediaQuery = window.matchMedia('(max-width: 1000px)');
 
-headerUserInterface.appendChild(
-    createLoginIcon("admin_login.html","user.svg")
-);
+function replaceTextWithIcon() {
+    if (mediaQuery.matches) {
+        loginText.remove();
+        headerUserInterface.append(
+            createLoginIcon("admin_login.html", "user.svg")
+        );
+    }
+}
+replaceTextWithIcon();
+
+mediaQuery.addListener(replaceTextWithIcon);

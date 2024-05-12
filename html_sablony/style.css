@@ -814,7 +814,7 @@ select {
 @media screen and (max-width: 665px) {
     .header_user {
         .header_logo_h {
-            img {
+            .logo {
                 display: none;
             }
             h1 {
