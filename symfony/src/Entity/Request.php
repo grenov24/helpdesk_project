@@ -39,13 +39,14 @@ class Request
     private ?string $phone_number = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $category = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $location = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $ev_number = null;
+
+    #[ORM\ManyToOne(inversedBy: 'requests')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Category $category = null;
 
     public function getId(): ?int
     {
@@ -148,18 +149,6 @@ class Request
         return $this;
     }
 
-    public function getCategory(): ?string
-    {
-        return $this->category;
-    }
-
-    public function setCategory(string $category): static
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
     public function getLocation(): ?string
     {
         return $this->location;
@@ -183,4 +172,17 @@ class Request
 
         return $this;
     }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): static
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
 }
