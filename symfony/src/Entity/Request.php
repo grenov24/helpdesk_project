@@ -3,10 +3,14 @@
 namespace App\Entity;
 
 use App\Repository\RequestRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\String\Slugger\SluggerInterface;
 
 #[ORM\Entity(repositoryClass: RequestRepository::class)]
+#[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_SLUG', fields: ['slug'])]
 class Request
 {
     #[ORM\Id]
@@ -20,7 +24,7 @@ class Request
     #[ORM\Column(type: Types::TEXT)]
     private ?string $content = null;
 
-    #[ORM\Column]
+    #[ORM\Column(type: Types::DATETIME_IMMUTABLE, options: ['default' => 'CURRENT_TIMESTAMP'])]
     private ?\DateTimeImmutable $date_created = null;
 
     #[ORM\Column(length: 255)]
@@ -47,6 +51,28 @@ class Request
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $ev_number = null;
 
+    /**
+     * @var Collection<int, Comment>
+     */
+    #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'request', orphanRemoval: true)]
+    private Collection $comments;
+
+    public function __construct()
+    {
+        $this->comments = new ArrayCollection();
+    }
+
+    #[ORM\PrePersist]
+    public function setDateCreatedValue(): void
+    {
+        $this->date_created = new \DateTimeImmutable();
+    } 
+
+    public function createSlug(SluggerInterface $slugger): void
+    {
+        $this->slug = $slugger->slug($this->id);
+    }
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -180,6 +206,36 @@ class Request
     public function setEvNumber(?string $ev_number): static
     {
         $this->ev_number = $ev_number;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Comment>
+     */
+    public function getComments(): Collection
+    {
+        return $this->comments;
+    }
+
+    public function addComment(Comment $comment): static
+    {
+        if (!$this->comments->contains($comment)) {
+            $this->comments->add($comment);
+            $comment->setRequest($this);
+        }
+
+        return $this;
+    }
+
+    public function removeComment(Comment $comment): static
+    {
+        if ($this->comments->removeElement($comment)) {
+            // set the owning side to null (unless already changed)
+            if ($comment->getRequest() === $this) {
+                $comment->setRequest(null);
+            }
+        }
 
         return $this;
     }
