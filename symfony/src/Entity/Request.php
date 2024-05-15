@@ -36,7 +36,7 @@ class Request
     private ?Status $status = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $userName = null;
+    private ?string $user_name = null;
 
     #[ORM\Column(length: 255)]
     private ?string $user_email = null;
@@ -138,12 +138,12 @@ class Request
 
     public function getUserName(): ?string
     {
-        return $this->userName;
+        return $this->user_name;
     }
 
-    public function setUserName(?string $userName): static
+    public function setUser_name(?string $user_name): static
     {
-        $this->userName = $userName;
+        $this->user_name = $user_name;
 
         return $this;
     }
