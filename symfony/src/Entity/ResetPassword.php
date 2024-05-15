@@ -21,7 +21,7 @@ class ResetPassword
 
     #[ORM\OneToOne(cascade: ['persist', 'remove'])]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Administrator $Administrator = null;
+    private ?Admin $admin = null;
 
     public function getId(): ?int
     {
@@ -52,14 +52,14 @@ class ResetPassword
         return $this;
     }
 
-    public function getAdministrator(): ?Administrator
+    public function getAdmin(): ?Admin
     {
-        return $this->Administrator;
+        return $this->admin;
     }
 
-    public function setAdministrator(Administrator $Administrator): static
+    public function setAdmin(Admin $admin): static
     {
-        $this->Administrator = $Administrator;
+        $this->admin = $admin;
 
         return $this;
     }

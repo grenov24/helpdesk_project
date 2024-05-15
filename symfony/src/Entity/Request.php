@@ -20,33 +20,32 @@ class Request
     #[ORM\Column(type: Types::TEXT)]
     private ?string $content = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $image = null;
-
     #[ORM\Column]
     private ?\DateTimeImmutable $date_created = null;
 
     #[ORM\Column(length: 255)]
     private ?string $slug = null;
 
+    #[ORM\ManyToOne(inversedBy: 'requests')]
+    private ?Admin $technician = null;
+
+    #[ORM\ManyToOne(inversedBy: 'requests')]
+    private ?Category $category = null;
+
+    #[ORM\ManyToOne(inversedBy: 'requests')]
+    private ?Status $status = null;
+
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $requester = null;
+    private ?string $userName = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $email = null;
+    private ?string $user_email = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $phone_number = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $location = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $ev_number = null;
-
-    #[ORM\ManyToOne(inversedBy: 'requests')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Category $category = null;
 
     public function getId(): ?int
     {
@@ -77,18 +76,6 @@ class Request
         return $this;
     }
 
-    public function getImage(): ?string
-    {
-        return $this->image;
-    }
-
-    public function setImage(?string $image): static
-    {
-        $this->image = $image;
-
-        return $this;
-    }
-
     public function getDateCreated(): ?\DateTimeImmutable
     {
         return $this->date_created;
@@ -113,38 +100,62 @@ class Request
         return $this;
     }
 
-    public function getRequester(): ?string
+    public function getTechnician(): ?Admin
     {
-        return $this->requester;
+        return $this->technician;
     }
 
-    public function setRequester(?string $requester): static
+    public function setTechnician(?Admin $technician): static
     {
-        $this->requester = $requester;
+        $this->technician = $technician;
 
         return $this;
     }
 
-    public function getEmail(): ?string
+    public function getCategory(): ?Category
     {
-        return $this->email;
+        return $this->category;
     }
 
-    public function setEmail(string $email): static
+    public function setCategory(?Category $category): static
     {
-        $this->email = $email;
+        $this->category = $category;
 
         return $this;
     }
 
-    public function getPhoneNumber(): ?string
+    public function getStatus(): ?Status
     {
-        return $this->phone_number;
+        return $this->status;
     }
 
-    public function setPhoneNumber(?string $phone_number): static
+    public function setStatus(?Status $status): static
     {
-        $this->phone_number = $phone_number;
+        $this->status = $status;
+
+        return $this;
+    }
+
+    public function getUserName(): ?string
+    {
+        return $this->userName;
+    }
+
+    public function setUserName(?string $userName): static
+    {
+        $this->userName = $userName;
+
+        return $this;
+    }
+
+    public function getUserEmail(): ?string
+    {
+        return $this->user_email;
+    }
+
+    public function setUserEmail(string $user_email): static
+    {
+        $this->user_email = $user_email;
 
         return $this;
     }
@@ -154,7 +165,7 @@ class Request
         return $this->location;
     }
 
-    public function setLocation(string $location): static
+    public function setLocation(?string $location): static
     {
         $this->location = $location;
 
@@ -172,17 +183,4 @@ class Request
 
         return $this;
     }
-
-    public function getCategory(): ?Category
-    {
-        return $this->category;
-    }
-
-    public function setCategory(?Category $category): static
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
 }
