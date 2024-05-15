@@ -12,14 +12,14 @@ use Doctrine\ORM\Events;
 #[AsEntityListener(event: Events::prePersist, entity: Category::class)]
 #[AsEntityListener(event: Events::preUpdate, entity: Category::class)]
 
-class CategoryEntityListener extends EntityListenerWithSlugger 
+class CategoryEntityListener extends EntityListenerWithSlugger
 {
-    public function prePersist(Category $category, LifecycleEventArgs $event): void 
+    public function prePersist(Category $category, LifecycleEventArgs $event): void
     {
         $category->createSlug($this->slugger);
     }
 
-    public function preUpdate(Category $category, LifecycleEventArgs $event): void 
+    public function preUpdate(Category $category, LifecycleEventArgs $event): void
     {
         $category->createSlug($this->slugger);
     }

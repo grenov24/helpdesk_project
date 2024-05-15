@@ -6,7 +6,8 @@ namespace App\EntityListener;
 
 use Symfony\Component\String\Slugger\SluggerInterface;
 
-class EntityListenerWithSlugger {
+class EntityListenerWithSlugger
+{
     public function __construct(protected SluggerInterface $slugger)
     {
     }
