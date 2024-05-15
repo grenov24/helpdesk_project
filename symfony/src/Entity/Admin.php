@@ -48,11 +48,11 @@ class Admin implements UserInterface, PasswordAuthenticatedUserInterface
         $this->requests = new ArrayCollection();
     }
 
-    /*#[ORM\PrePersist]
+    #[ORM\PrePersist]
     public function setRolesValue(): void
     {
-        $this->roles[] = UserRoles.User;
-    }*/
+        $this->roles[] = UserRoles::Admin;
+    }
 
     public function getId(): ?int
     {
