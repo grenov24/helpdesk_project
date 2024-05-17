@@ -31,7 +31,7 @@ class Request
     private ?string $slug = null;
 
     #[ORM\ManyToOne(inversedBy: 'requests')]
-    private ?User $technician = null;
+    private ?Admin $technician = null;
 
     #[ORM\ManyToOne(inversedBy: 'requests')]
     private ?Category $category = null;
@@ -129,12 +129,12 @@ class Request
         return $this;
     }
 
-    public function getTechnician(): ?User
+    public function getTechnician(): ?Admin
     {
         return $this->technician;
     }
 
-    public function setTechnician(?User $technician): static
+    public function setTechnician(?Admin $technician): static
     {
         $this->technician = $technician;
 
