@@ -11,6 +11,7 @@ use Symfony\Component\String\Slugger\SluggerInterface;
 
 #[ORM\Entity(repositoryClass: RequestRepository::class)]
 #[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_SLUG', fields: ['slug'])]
+#[ORM\HasLifecycleCallbacks]
 class Request
 {
     #[ORM\Id]

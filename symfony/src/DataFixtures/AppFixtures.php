@@ -1,5 +1,7 @@
 <?php
 
+namespace App\DataFixtures;
+
 use App\Entity\Admin;
 use App\Entity\Category;
 use App\Entity\Request;

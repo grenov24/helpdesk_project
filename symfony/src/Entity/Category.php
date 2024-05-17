@@ -36,7 +36,7 @@ class Category
 
     public function createSlug(SluggerInterface $slugger): void
     {
-        $this->slug = $slugger->slug($this->id);
+        $this->slug = $slugger->slug($this->name);
     }
 
     public function getId(): ?int
