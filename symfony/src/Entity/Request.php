@@ -70,10 +70,13 @@ class Request
     {
         $this->date_created = new \DateTimeImmutable();
     } 
-
+    //vytvařet slug z generovaného ID?
+    //je možnost ID upravit, nebo je lepší vytvořit novou
+    //tabulku jen pro speciální ID? (20240001,20240002)
+    //zatím ponechám vytvaření z name kvůli seedu databáze
     public function createSlug(SluggerInterface $slugger): void
     {
-        $this->slug = $slugger->slug($this->id);
+        $this->slug = $slugger->slug($this->name);
     }
     
     public function getId(): ?int
@@ -170,7 +173,7 @@ class Request
         return $this->user_name;
     }
 
-    public function setUser_name(?string $user_name): static
+    public function setUsername(?string $user_name): static
     {
         $this->user_name = $user_name;
 
