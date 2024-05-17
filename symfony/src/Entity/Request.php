@@ -61,6 +61,9 @@ class Request
     #[ORM\Column(length: 512, nullable: true)]
     private ?string $image = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $userPhone = null;
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
@@ -255,6 +258,18 @@ class Request
     public function setImage(?string $image): static
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function getUserPhone(): ?string
+    {
+        return $this->userPhone;
+    }
+
+    public function setUserPhone(?string $userPhone): static
+    {
+        $this->userPhone = $userPhone;
 
         return $this;
     }

@@ -34,11 +34,11 @@ class AppFixtures extends Fixture
                 )
             );
         $manager->persist($admin);
-        for ($k = 0; $k < 5; $k++) {
+        
             $category = new Category();
             $category->setName('Porucha-techniky', 'Požadavky-k-nákupu', 'Promítání', 'Jiné', 'Archív');
             $manager->persist($category);
-        }
+       
         for ($o = 0; $o < 3; $o++) {
             $status = new Status();
             $status->setName('Přijato', 'V řešení', 'Hotovo');
@@ -57,12 +57,13 @@ class AppFixtures extends Fixture
                 $request = new Request();
                 $request->setName($faker->words(3, true))
                     ->setContent($content)
-                    ->setLocation('testovací lokace')
+                    ->setLocation('2.patro pavilo A Dětská neurochirurgie')
                     ->setUserEmail('testing@email.com')
-                    ->setUsername('testovací jméno')
+                    ->setUsername('Lenka Nováková')
                     ->setEvNumber('F00999P')
                     ->setImage('Smiley.png')
-                    ->setTechnician($admin);
+                    ->setTechnician($admin)
+                    ->setUserPhone('774082337');
                 $category->addRequest($request);
                 $status->addRequest($request);
                 $manager->persist($request);
