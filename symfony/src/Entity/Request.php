@@ -57,6 +57,9 @@ class Request
     #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'request', orphanRemoval: true)]
     private Collection $comments;
 
+    #[ORM\Column(length: 512, nullable: true)]
+    private ?string $image = null;
+
     public function __construct()
     {
         $this->comments = new ArrayCollection();
@@ -236,6 +239,18 @@ class Request
                 $comment->setRequest(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }
