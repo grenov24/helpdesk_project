@@ -2,7 +2,7 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Admin;
+use App\Entity\User;
 use App\Entity\Category;
 use App\Entity\Request;
 use App\Entity\Status;
@@ -23,7 +23,7 @@ class AppFixtures extends Fixture
         
         $faker = Faker\Factory::create();
 
-        $admin = new Admin();
+        $admin = new User();
         $admin->setName('Václav Greňo')
             ->setEmail('vaclav.greno@gmail.com')
             ->setRoles([UserRoles::Admin])

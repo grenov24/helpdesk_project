@@ -20,7 +20,7 @@ class Comment
 
     #[ORM\ManyToOne]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Admin $admin = null;
+    private ?User $admin = null;
 
     #[ORM\ManyToOne(inversedBy: 'comments')]
     #[ORM\JoinColumn(nullable: false)]
@@ -52,12 +52,12 @@ class Comment
         return $this;
     }
 
-    public function getAdmin(): ?Admin
+    public function getAdmin(): ?User
     {
         return $this->admin;
     }
 
-    public function setAdmin(?Admin $admin): static
+    public function setAdmin(?User $admin): static
     {
         $this->admin = $admin;
 
