@@ -34,14 +34,16 @@ class AppFixtures extends Fixture
                 )
             );
         $manager->persist($admin);
-
-        $category = new Category();
-        $category->setName('Porucha techniky', 'Požadavky k nákupu', 'Promítání', 'Jiné', 'Archív');
-        $manager->persist($category);
-
-        $status = new Status();
-        $status->setName('Přijato', 'V řešení', 'Hotovo');
-        $manager->persist($status);
+        for ($k = 0; $k < 5; $k++) {
+            $category = new Category();
+            $category->setName('Porucha-techniky', 'Požadavky-k-nákupu', 'Promítání', 'Jiné', 'Archív');
+            $manager->persist($category);
+        }
+        for ($o = 0; $o < 3; $o++) {
+            $status = new Status();
+            $status->setName('Přijato', 'V řešení', 'Hotovo');
+            $manager->persist($status);
+        }
 
         for ($i = 0; $i < 5; $i++) {
             $requestCount = $faker->numberBetween(5, 25);
