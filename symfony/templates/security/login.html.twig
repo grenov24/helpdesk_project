@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Příhlášení Helpdesk{% endblock %}
+
+{% block body %}
+    {% include 'components/public/header.html.twig' %}
+
+    <main class="admin_login">
+        <h2>Přihlášení do správcovského rozhraní</h2>
+        <form action="admin_login.html" method="post" enctype="multipart/form-data">
+            
+            <label id="label_login" for="email">Emailová adresa:</label>
+            <input id="input_login" type="email" name="email" id="email" required>
+            
+            <label id="label_login" for="password">Heslo:</label>
+            <input id="input_login" type="password" name="password" id="password" required>
+            
+            <input class="submit_login" class="submit" type="submit" value="Příhlásit se">
+        </form>
+    </main>
+
+    {% include 'components/public/footer.html.twig' %}
+{% endblock %}

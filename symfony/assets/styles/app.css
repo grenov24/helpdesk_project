@@ -69,7 +69,7 @@ select {
 }
 
 .header_user {
-    height: 29.375rem;
+    height: 24rem;
     box-shadow: 5px 0px 10px var(--shadow);
     background-color: var(--background-color);
     
@@ -223,6 +223,7 @@ select {
     }
 
     .submit {
+        
         width: 12.5rem;
         height: 5rem;
         cursor: pointer;
@@ -454,11 +455,11 @@ select {
         #input_login {
             height: 3rem;
             background-color: var(--background-color);
-            padding: 0;
+            padding: 0 0 0 0.5rem;
             border: 0.15rem solid;
             
             cursor: pointer;
-            text-align: center;
+            
         }
         .submit_login {
             height: 4rem;
@@ -642,6 +643,7 @@ select {
         }
     }
     .page_cards {
+        margin-top: var(--l-gap);
         display: flex;
         align-content: center;
         justify-content: center;
@@ -668,7 +670,6 @@ select {
 
 @media screen and (max-width: 1281px) {
     .header_user {
-        height: 25rem;
         .header_logo_h {
             img {
                 object-fit: contain;
