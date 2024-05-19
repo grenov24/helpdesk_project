@@ -8,44 +8,13 @@
 
 {% include 'components/public/nav_admin.html.twig' %}
 
-<main class="admin_main">
-    <h2>Název kategorie</h2>
-    <div class="request_tile_flex"> <!--div pro flex-->
-        <div class="request_tile">
-            <div class="request_number_tile">
-                číslo požadavku
-            </div>
-            <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
-                <select class="technician_tile" name="technician" id="technician">
-                    <option value="not_taken"></option>
-                    <option value="Václav">Václav</option>
-                    <option value="Zdeněk">Zdeněk</option>
-                    <option value="Petr">Petr</option>
-                    <option value="Filip">Filip</option>
-                    <option value="Daniel">Daniel</option>
-                    <!--potřeba promyslet, jestli je nabídka dostačující-->
-                </select>
-            </form>
-            <div class="break">
-            </div>
-            <div class="text_tile">
-                text požadavku
-            </div>
-            <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
-                <select class="status_tile" name="status" id="status">
-                    <option value="recieved">Přijato</option>
-                    <option value="solving">V řešení</option>
-                    <option value="drop">Odloženo</option>
-                    <option value="finished">Hotovo</option>
-                    <!--potřeba promyslet, jestli je nabídka dostačující-->
-                </select>
-            </form>
-        </div>
-    </div>
-    <div class="page_cards">
-        <a href=""> Předchozí</a>
-        <a href=""> Další</a>
-    </div>
-</main>
-
+    <main class="admin_main">
+        <h2>Název kategorie</h2>
+        {% include 'components/public/request_card.html.twig' %}
+        
+        <div class="page_cards">
+            <a href=""> Předchozí</a>
+            <a href=""> Další</a>
+        </div>  
+    </main> 
 {% endblock %}

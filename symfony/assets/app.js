@@ -6,6 +6,7 @@
  */
 import './styles/app.css';
 import './script/script.js';
+import './script/toggle.js';
 
 console.log('This log comes from assets/app.js - welcome to AssetMapper! 🎉');
 
