@@ -8,7 +8,7 @@
     <title>Helpdesk</title>
 </head>
 
-<body class="admin_body">
+<body>
     <header class="admin_header">
         <img src="image.png" alt="logo_lf2_long" class="logo">
         <a href="" class="my_requests">
@@ -28,11 +28,58 @@
     </nav>
     <main class="admin_main">
         <h2>Název kategorie</h2>
-        <div class="request_tile_flex"> <!--div pro flex-->
-            <div class="request_tile">
-                <div class="request_number_tile">
-                    číslo požadavku
+        <div id="card" onclick="openCardContent(this)">
+            <div>
+                <p>číslo požadavku</p>
+            </div>
+            <div id="hidden-content">
+                <div>
+                    <p>Lucie Nováková</p>
                 </div>
+                <div>
+                    <p>+420 755 888 444</p>
+                </div>
+                <div>
+                    <p>lucie.novakova@email.cz</p>
+                </div>
+                <div>
+                    <p>Dětská chirurgie</p>
+                </div>
+                <div>
+                    <p>F00555P</p>
+                </div>
+                <div>
+                    <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
+                        <select class="technician_tile" name="technician" id="technician">
+                            <option value="not_taken"></option>
+                            <option value="Václav">Václav</option>
+                            <option value="Zdeněk">Zdeněk</option>
+                            <option value="Petr">Petr</option>
+                            <option value="Filip">Filip</option>
+                            <option value="Daniel">Daniel</option>
+                            <!--potřeba promyslet, jestli je nabídka dostačující-->
+                        </select>
+                    </form>
+                    <div class="text_request">
+                        text požadavku
+                    </div>
+                    <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
+                        <select class="status_tile" name="status" id="status">
+                            <option value="recieved">Přijato</option>
+                            <option value="solving">V řešení</option>
+                            <option value="finished">Hotovo</option>
+                            <!--potřeba promyslet, jestli je nabídka dostačující-->
+                        </select>
+                    </form>
+                </div>
+                <div>
+                    Kometář technika
+                </div>   
+                <div class="close-btn">
+                    <button onclick="closeCardContent(event)">Close</button>
+                </div>
+            </div>
+            <div class="pre_card">
                 <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
                     <select class="technician_tile" name="technician" id="technician">
                         <option value="not_taken"></option>
@@ -44,16 +91,13 @@
                         <!--potřeba promyslet, jestli je nabídka dostačující-->
                     </select>
                 </form>
-                <div class="break">
-                </div>
-                <div class="text_tile">
+                <div class="text_request">
                     text požadavku
                 </div>
                 <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
                     <select class="status_tile" name="status" id="status">
                         <option value="recieved">Přijato</option>
                         <option value="solving">V řešení</option>
-                        <option value="drop">Odloženo</option>
                         <option value="finished">Hotovo</option>
                         <!--potřeba promyslet, jestli je nabídka dostačující-->
                     </select>
@@ -63,7 +107,8 @@
         <div class="page_cards">
             <a href=""> Předchozí</a>
             <a href=""> Další</a>
-        </div>
+        </div>    
     </main>
+    <script src ="script.js"></script>
 </body>
 </html>

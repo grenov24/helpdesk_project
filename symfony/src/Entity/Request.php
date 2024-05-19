@@ -62,7 +62,7 @@ class Request
     private ?string $image = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $userPhone = null;
+    private ?string $user_phone = null;
 
     public function __construct()
     {
@@ -264,12 +264,12 @@ class Request
 
     public function getUserPhone(): ?string
     {
-        return $this->userPhone;
+        return $this->user_phone;
     }
 
-    public function setUserPhone(?string $userPhone): static
+    public function setUserPhone(?string $user_phone): static
     {
-        $this->userPhone = $userPhone;
+        $this->user_phone = $user_phone;
 
         return $this;
     }
