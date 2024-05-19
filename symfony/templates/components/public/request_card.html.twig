@@ -4,19 +4,22 @@
     </div>
     <div id="hidden-content">
         <div>
-            <p>Lucie Nováková</p>
+            <p>{{ request.username }}</p>
         </div>
         <div>
-            <p>+420 755 888 444</p>
+            <p>{{ request.useremail }}</p>
         </div>
         <div>
-            <p>lucie.novakova@email.cz</p>
+            <p>{{ request.userphone }}</p>
         </div>
         <div>
-            <p>Dětská chirurgie</p>
+            <p>{{ request.location }}</p>
         </div>
         <div>
-            <p>F00555P</p>
+            <p>{{ request.evnumber }}</p>
+        </div>
+        <div>
+            <p>datum</p>
         </div>
         <div>
             <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
@@ -43,8 +46,14 @@
             </form>
         </div>
         <div>
-            Kometář technika
-        </div>   
+            <form class="form_comment" action="" method="post" enctype="multipart/form-data">
+                <label for="problem_text"><b>*Popis požadavku:</b></label>
+                <textarea name="comment_tile" id="comment_tile"</textarea>
+            </form>
+        </div>  
+        <div>
+            <img src="{{ asset('images/' ~ request.image) }}>
+        </div> 
         <div class="close-btn">
             <button onclick="closeCardContent(event)">Close</button>
         </div>
@@ -74,6 +83,7 @@
         </form>
     </div>
 </div>
+
 {% block javascripts %}
     {% block importmap %}{{ importmap('app') }}{% endblock %}
 {% endblock %}

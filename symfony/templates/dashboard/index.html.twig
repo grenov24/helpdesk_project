@@ -10,7 +10,9 @@
 
     <main class="admin_main">
         <h2>Název kategorie</h2>
-        {% include 'components/public/request_card.html.twig' %}
+        {% for request in requests %}
+            {% include 'components/public/request_card.html.twig' %}
+        {% endfor %}
         
         <div class="page_cards">
             <a href=""> Předchozí</a>
