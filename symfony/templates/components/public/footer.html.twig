@@ -1,8 +1,8 @@
 <footer class="footer_user">
     <div>
-        <a href="">GDPR</a>
-        <a href="">Cookies</a>
-        <a href="">Podmínky</a>
+        {% for infopage in info_pages %}
+            <a href="">{{ infopage.name }}</a>
+        {% endfor %}
         <a href="">Kontakty</a>
     </div>
     <hr>
