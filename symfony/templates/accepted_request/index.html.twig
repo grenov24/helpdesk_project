@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Helpdesk 2.LF UK{% endblock %}
+
+{% block body %}
+    {% include 'components/public/header.html.twig' %}
+
+    <main>
+        <h2 class="entry_successful">Váš požadavek byl úspěšně přijat!</h2>
+        <div class="div_entry_id">
+            <div class="text_entry_id">
+                číslo požadavku:
+            </div>
+            <div class="number_entry_id">
+                X X X X X X X
+            </div>
+        </div>
+        <div class="note_entry_id">
+            Pomocí čísla požadavku, můžete <br/>nahlédnout v jakém stavu, je řešení <br/>vašeho požadavku.
+        </div>
+    </main>
+
+{% include 'components/public/footer.html.twig' %}
+
+{% endblock %}

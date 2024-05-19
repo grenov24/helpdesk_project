@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Helpdesk 2.LF UK{% endblock %}
+
+{% block body %}
+    {% include 'components/public/header.html.twig' %}
+
+    <main>
+        <h2 class="search_request_h">Prosím vložte číslo vašeho<br><span>požadavku:</span></h2>
+            <form action="kontrola_pozadavku.html" method="post" enctype="multipart/form-data">
+                <input class="search_request" type="ntext" name="id_number" id="id_number" placeholder="XXXXXXXX" required>
+                <!--odeslání jenom pomocí enter - enbo automatické po vyplnění správného formátu?-->
+            </form>
+        </div>
+    </main>
+
+{% include 'components/public/footer.html.twig' %}
+
+{% endblock %}

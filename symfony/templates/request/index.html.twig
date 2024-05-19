@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Helpdesk 2.LF UK{% endblock %}
+
+{% block body %}
+    {% include 'components/public/header.html.twig' %}
+
+    <main class="main_bulletin">
+        <h2>Požadavek č. <span>XXXX</span></h2>
+        <hr>
+        <div>
+            <section class="request_text">
+                <h3>Popis problému</h3>
+                <div>text problému.</div>
+            </section>
+            <section class="request_status">
+                <div>Stav</div> 
+            </section>    
+            <section class="request_comment">
+                <h3>Poznámka technika</h3>
+                <div>poznámka text</div>
+            </section>
+        </div>
+    </main>
+
+{% include 'components/public/footer.html.twig' %}
+
+{% endblock %}
