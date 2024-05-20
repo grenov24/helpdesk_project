@@ -1,7 +1,5 @@
 <div id="card" onclick= "openCardContent(this)">
-    <div>
-        <p>číslo požadavku</p>
-    </div>
+    <h3>číslo požadavku</h3>
     <div id="hidden-content">
         <div>
             <p>{{ request.username }}</p>
@@ -34,7 +32,7 @@
                 </select>
             </form>
             <div class="text_request">
-                text požadavku
+                {{ request.content }}
             </div>
             <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
                 <select class="status_tile" name="status" id="status">
@@ -52,13 +50,17 @@
             </form>
         </div>  
         <div>
-            <img src="{{ asset('images/' ~ request.image) }}>
+            <img src="{{ asset('images/' ~ request.image) }}">
         </div> 
         <div class="close-btn">
             <button onclick="closeCardContent(event)">Close</button>
         </div>
     </div>
     <div class="pre_card">
+        <div class="text_request">
+            {{ request.content|striptags|u.truncate(120, '...') }}
+        </div>
+        
         <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
             <select class="technician_tile" name="technician" id="technician">
                 <option value="not_taken"></option>
@@ -70,9 +72,6 @@
                 <!--potřeba promyslet, jestli je nabídka dostačující-->
             </select>
         </form>
-        <div class="text_request">
-            text požadavku
-        </div>
         <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
             <select class="status_tile" name="status" id="status">
                 <option value="recieved">Přijato</option>
@@ -81,9 +80,6 @@
                 <!--potřeba promyslet, jestli je nabídka dostačující-->
             </select>
         </form>
-    </div>
+    </div>  
 </div>
 
-{% block javascripts %}
-    {% block importmap %}{{ importmap('app') }}{% endblock %}
-{% endblock %}

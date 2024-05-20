@@ -1,8 +1,7 @@
 <nav class="admin_nav">
+
     <a href="">Všechny požadavky</a>
-    <a href="">Porucha techniky</a>
-    <a href="">Požadavky k nákupu</a>
-    <a href="">Promítání</a>
-    <a href="">Jiné</a>
-    <a href="">Archív</a>
+    {% for category in categories %}
+        <a href="">{{ category.name }}</a>
+    {% endfor %}
 </nav>

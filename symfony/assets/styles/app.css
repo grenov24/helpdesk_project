@@ -529,7 +529,7 @@ select {
     }
 
     a:hover:not(.active) {
-        background-color: #4B49AC;
+        background-color: var(--admin-dark-color);
         color: var(--secondary-text-color);
     }
 }
@@ -558,7 +558,7 @@ select {
     }
 
     a:hover:not(.active) {
-        background-color: #4B49AC;
+        background-color: var(--admin-dark-color);
         color: var(--secondary-text-color);
     }
 }
@@ -568,28 +568,58 @@ select {
     margin: 5rem 7.16rem 5rem 33rem;
     padding: 2.5rem 5rem 2.5rem 5rem;
 
+    #card:hover:not(.active) {
+        background-color: var(--admin-medium-color);
+    }
+
     h2 {
         font-size: 3rem;
         font-weight: 500;
     }
 
     #card {
-        width: 300px;
-        background-color: #f2f2f2;
-        padding: 20px;
-        border-radius: 5px;
+        width: auto;
+        background-color: var(--admin-light-color);
+        padding: 2rem;
+        border-radius: var(--s-radius);
         cursor: pointer;
+        margin-bottom: var(--m-gap);
+        h3 {
+            font-size: var(--s-font-size);
+            border-radius: var(--s-radius);
+            font-weight: 600;
+            padding: 0.5rem;
+            background-color: var(--background-color);
+            text-align: center;
+            width: fit-content;
+            margin-top: 0;
+        }
+        .pre_card {
+            display: flex;
+            .text_request {
+                border-radius: var(--s-radius);
+                padding: 0.5rem;
+                background-color: var(--background-color);
+                width: fit-content;
+    
+            }
+            .form_technician{
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+            }
+        }
+
     }
 
     #hidden-content {
         display: none;
-        margin-top: 10px;
+        margin-top: 1rem;
     }
 
     .close-btn {
         display: none;
         text-align: right;
-        margin-top: 10px;
+        margin-top: 0.8rem;
     }
 
     .page_cards {
