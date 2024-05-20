@@ -1,7 +1,7 @@
 <footer class="footer_user">
     <div>
         {% for infopage in info_pages %}
-            <a href="">{{ infopage.name }}</a>
+            <a href="{{ path('app_info_page', {slug: infopage.slug}) }}">{{ infopage.name }}</a>
         {% endfor %}
         <a href="">Kontakty</a>
     </div>

@@ -468,11 +468,10 @@ select {
         #input_login {
             height: 3rem;
             background-color: var(--background-color);
-            padding: 0;
+            padding: 0.2rem;
             border: 0.15rem solid;
 
             cursor: pointer;
-            text-align: center;
         }
 
         .submit_login {
