@@ -527,7 +527,7 @@ select {
         align-content: center;
     }
 
-    a:hover:not(.active) {
+    #colored:hover:not(.active) {
         background-color: var(--admin-dark-color);
         color: var(--secondary-text-color);
     }
