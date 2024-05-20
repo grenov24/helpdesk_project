@@ -27,28 +27,31 @@
         <a href="">Archív</a>
     </nav>
     <main class="admin_main">
-        <h2>Název kategorie</h2>
-        <div id="card" onclick="openCardContent(this)">
-            <div>
-                <p>číslo požadavku</p>
-            </div>
+        <div id="card" onclick= "openCardContent(this)">
+            <h3>číslo požadavku</h3>
             <div id="hidden-content">
                 <div>
-                    <p>Lucie Nováková</p>
+                    {{ request.username }}
                 </div>
                 <div>
-                    <p>+420 755 888 444</p>
+                    {{ request.useremail }}
                 </div>
                 <div>
-                    <p>lucie.novakova@email.cz</p>
+                    {{ request.userphone }}
                 </div>
                 <div>
-                    <p>Dětská chirurgie</p>
+                    {{ request.location }}
                 </div>
                 <div>
-                    <p>F00555P</p>
+                    {{ request.evnumber }}
                 </div>
                 <div>
+                    {{ request.datecreated }}
+                </div>
+                <div class="post_card">
+                    <div class="text_request">
+                        Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... Text požadavku, který je velmi dlouhý... 
+                    </div>
                     <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
                         <select class="technician_tile" name="technician" id="technician">
                             <option value="not_taken"></option>
@@ -60,9 +63,7 @@
                             <!--potřeba promyslet, jestli je nabídka dostačující-->
                         </select>
                     </form>
-                    <div class="text_request">
-                        text požadavku
-                    </div>
+                    
                     <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
                         <select class="status_tile" name="status" id="status">
                             <option value="recieved">Přijato</option>
@@ -73,41 +74,35 @@
                     </form>
                 </div>
                 <div>
-                    Kometář technika
-                </div>   
+                    <form class="request_comment" action="" method="post" enctype="multipart/form-data">
+                        <textarea name="comment_tile" id="comment_tile"></textarea>
+                    </form>
+                </div>  
+                <div>
+                    <img src="Smiley.png">
+                </div> 
                 <div class="close-btn">
                     <button onclick="closeCardContent(event)">Close</button>
                 </div>
             </div>
             <div class="pre_card">
-                <form class="form_technician" action="admin.html" method="post" enctype="multipart/form-data">
-                    <select class="technician_tile" name="technician" id="technician">
-                        <option value="not_taken"></option>
-                        <option value="Václav">Václav</option>
-                        <option value="Zdeněk">Zdeněk</option>
-                        <option value="Petr">Petr</option>
-                        <option value="Filip">Filip</option>
-                        <option value="Daniel">Daniel</option>
-                        <!--potřeba promyslet, jestli je nabídka dostačující-->
-                    </select>
-                </form>
                 <div class="text_request">
-                    text požadavku
+                    {{ request.content|striptags|u.truncate(120, '...') }}
                 </div>
-                <form class="form_status" action="admin.html" method="post" enctype="multipart/form-data">
-                    <select class="status_tile" name="status" id="status">
-                        <option value="recieved">Přijato</option>
-                        <option value="solving">V řešení</option>
-                        <option value="finished">Hotovo</option>
-                        <!--potřeba promyslet, jestli je nabídka dostačující-->
-                    </select>
-                </form>
-            </div>
+                
+                <div class="technician">
+                    {{ request.technician }}
+                </div>
+                <div class="status">
+                    {{ request.status }}
+                </div>
+            </div>  
         </div>
         <div class="page_cards">
             <a href=""> Předchozí</a>
             <a href=""> Další</a>
-        </div>    
+        </div>  
+        
     </main>
     <script src ="script.js"></script>
 </body>

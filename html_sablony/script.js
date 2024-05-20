@@ -74,5 +74,5 @@ function openCardContent(card) {
 
     hiddenContent.style.display = 'none';
     closeBtn.style.display = 'none';
-    preCard.style.display = 'block';
+    preCard.style.display = 'flex';
   }
