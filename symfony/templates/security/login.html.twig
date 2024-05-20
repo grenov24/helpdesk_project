@@ -7,7 +7,7 @@
 
     <main class="admin_login">
         <h2>Přihlášení do správcovského rozhraní</h2>
-        <form action="admin_login.html" method="post" enctype="multipart/form-data">
+        <form action="/prehled" method="post" enctype="multipart/form-data">
             
             <label id="label_login" for="email">Emailová adresa:</label>
             <input id="input_login" type="email" name="email" id="email" required>
@@ -21,3 +21,5 @@
 
     {% include 'components/public/footer.html.twig' %}
 {% endblock %}
+
+{# zatím nefunguje autentifikace uživatele, prozatím jen přesměrování na admin stránku :) #}
