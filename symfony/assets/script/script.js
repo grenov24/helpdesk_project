@@ -31,7 +31,7 @@ var linkIcon;
 function changeToIcon() {
 if (mediaQueryMax.matches) {
     if (!linkIcon) {
-    linkIcon = createImageLink('admin_login.html', 'user.svg');
+    linkIcon = createImageLink('/prihlasit-se', "/graphics/user.svg");
     headerUserInterface.appendChild(linkIcon);
     loginText.remove()
     }

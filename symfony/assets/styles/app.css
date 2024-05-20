@@ -71,8 +71,8 @@ select {
 }
 
 .header_user {
-    height: 29.375rem;
-    box-shadow: 5px 0px 10px var(--shadow);
+    height: 25rem;
+    box-shadow: 0.4rem 0 0.8rem var(--shadow);
     background-color: var(--background-color);
 
 
