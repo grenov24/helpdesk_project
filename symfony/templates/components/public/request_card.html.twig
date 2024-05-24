@@ -1,4 +1,5 @@
-<div id="card" onclick= "openCardContent(this)">
+{# TadyIDčko nechete - id má být na celé stránkce jen jedno #}
+<div class="card">
     <h3>číslo požadavku</h3>
     <div id="hidden-content">
         <div>
@@ -53,7 +54,7 @@
             <img src="{{ asset('images/' ~ request.image) }}">
         </div> 
         <div class="close-btn">
-            <button onclick="closeCardContent(event)">Close</button>
+            <button class="close-card">Close</button>
         </div>
     </div>
     <div class="pre_card">

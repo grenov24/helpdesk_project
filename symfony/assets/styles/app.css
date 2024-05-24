@@ -567,7 +567,7 @@ select {
     margin: 5rem 7.16rem 5rem 33rem;
     padding: 2.5rem 5rem 2.5rem 5rem;
 
-    #card:hover:not(.active) {
+    .card:hover:not(.active) {
         background-color: var(--admin-medium-color);
     }
 
@@ -576,7 +576,7 @@ select {
         font-weight: 500;
     }
 
-    #card {
+    .card {
         width: auto;
         background-color: var(--admin-light-color);
         padding: 2rem;
